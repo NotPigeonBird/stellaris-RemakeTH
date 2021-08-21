@@ -1,0 +1,15 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_th_spaceport_mana_factory"
+		texturefile = "gfx/interface/icons/modules/th_spaceport_mana_factory.dds"
+	}
+	spriteType = {
+		name = "GFX_th_spaceport_sukima_warehouse"
+		texturefile = "gfx/interface/icons/modules/th_spaceport_sukima_warehouse.dds"
+	}
+	spriteType = {
+		name = "GFX_th_spaceport_shenmi"
+		texturefile = "gfx/interface/icons/modules/th_spaceport_shenmi.dds"
+	}
+
+}

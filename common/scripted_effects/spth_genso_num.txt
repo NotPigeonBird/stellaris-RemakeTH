@@ -1,0 +1,609 @@
+###scope为planet
+spth_planet_gs_num_sum = {
+	spth_planet_ge_num_sum_pop =yes
+	spth_planet_ge_num_sum_dis =yes
+	#spth_planet_ge_num_sum_mod =yes
+	set_variable = {
+		which = spth_genso_num
+		value = 0
+	}
+	change_variable = {
+		which = spth_genso_num
+		value = spth_genso_num_pop
+	}
+	change_variable = {
+		which = spth_genso_num
+		value = spth_genso_num_dis
+	}
+	# change_variable = {
+	# 	which = spth_genso_num
+	# 	value = spth_genso_num_mod
+	# }
+	set_variable = {
+		which = spth_genso_num_mult
+		value = owner
+	}
+	multiply_variable = {
+		which = spth_genso_num
+		value = spth_genso_num_mult
+	}
+}
+spth_planet_ge_num_sum_pop = {
+	set_variable = {
+		which = spth_genso_num_pop
+		value = 0
+	}
+	every_owned_pop = {
+		limit = {
+			spth_is_mod_species = yes
+		}
+		prev = {
+			change_variable = {
+				which = spth_genso_num_pop
+				value = 1
+			}
+		}
+	}
+	set_variable = {
+		which = spth_genso_num_pop_mult
+		value = owner
+	}
+	multiply_variable = {
+		which = spth_genso_num_pop
+		value = spth_genso_num_pop_mult
+	}
+}
+spth_planet_ge_num_sum_dis = {
+	set_variable = {
+		which = spth_genso_num_dis
+		value = 0
+	}
+	if = {
+		limit = { 
+			has_building = building_hmg_plus
+		}
+		change_variable = {
+			which = spth_genso_num_dis
+			value = 150
+		}
+	}
+	else_if = {
+		limit = {
+			has_building = building_hmg
+		}
+		change_variable = {
+			which = spth_genso_num_dis
+			value = 50
+		}
+	}
+
+	if = {
+		limit = { 
+			has_building = building_suwa_plus
+		}
+		change_variable = {
+			which = spth_genso_num_dis
+			value = 150
+		}
+	}
+	else_if = {
+		limit = { 
+			has_building = building_suwa
+		}
+		change_variable = {
+			which = spth_genso_num_dis
+			value = 50
+		}
+	}
+
+	if = {
+		limit = { 
+			has_building = building_bl_plus
+		}
+		change_variable = {
+			which = spth_genso_num_dis
+			value = 150
+		}
+	}
+	else_if = {
+		limit = { 
+			has_building = building_bl
+		}
+		change_variable = {
+			which = spth_genso_num_dis
+			value = 50
+		}
+	}
+}
+spth_gs_num_sum = {
+	set_variable = {
+		which = spth_genso_num
+		value = 0
+	}
+	set_variable = {
+		which = spth_genso_num_mid
+		value = 0
+	}
+	every_owned_planet = {
+		spth_planet_gs_num_sum = yes
+		owner = {
+			set_variable = {
+				which = spth_genso_num
+				value = prev
+			}
+			change_variable = {
+				which = spth_genso_num_mid
+				value = spth_genso_num
+			}
+		}
+	}
+	set_variable = {
+		which = spth_genso_num
+		value = spth_genso_num_mid
+	}
+	if = {
+		limit = { 
+			NOT = {
+				has_modifier = spth_extra_genso
+			}
+		}
+		spth_gs_num_trigger = yes
+	}
+}
+spth_gs_num_trigger = {
+	if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 10000
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_lunatic_genso
+			}
+			remove_modifier = spth_lunatic_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_hard_genso
+			}
+			remove_modifier = spth_hard_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_normal_genso
+			}
+			remove_modifier = spth_normal_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_easy_genso
+			}
+			remove_modifier = spth_easy_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_new_genso
+			}
+			remove_modifier = spth_new_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			remove_modifier = spth_pool_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_extra_genso
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 7500
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_lunatic_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_hard_genso
+			}
+			remove_modifier = spth_hard_genso
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_normal_genso
+			}
+			remove_modifier = spth_normal_genso
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_easy_genso
+			}
+			remove_modifier = spth_easy_genso
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_new_genso
+			}
+			remove_modifier = spth_new_genso
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			remove_modifier = spth_pool_genso
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_lunatic_genso
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 5000
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_hard_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_modifier = spth_lunatic_genso
+				}
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_normal_genso
+			}
+			remove_modifier = spth_normal_genso
+			add_modifier = {
+				modifier = spth_hard_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_easy_genso
+			}
+			remove_modifier = spth_easy_genso
+			add_modifier = {
+				modifier = spth_hard_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_new_genso
+			}
+			remove_modifier = spth_new_genso
+			add_modifier = {
+				modifier = spth_hard_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			remove_modifier = spth_pool_genso
+			add_modifier = {
+				modifier = spth_hard_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_hard_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_hard_genso
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 3000
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_normal_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_modifier = spth_hard_genso
+					has_modifier = spth_lunatic_genso
+				}
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_easy_genso
+			}
+			remove_modifier = spth_easy_genso
+			add_modifier = {
+				modifier = spth_normal_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_new_genso
+			}
+			remove_modifier = spth_new_genso
+			add_modifier = {
+				modifier = spth_normal_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			remove_modifier = spth_pool_genso
+			add_modifier = {
+				modifier = spth_normal_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_normal_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_normal_genso
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 1000
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_easy_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_modifier = spth_normal_genso
+					has_modifier = spth_hard_genso
+					has_modifier = spth_lunatic_genso
+				}
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_new_genso
+			}
+			remove_modifier = spth_new_genso
+			add_modifier = {
+				modifier = spth_easy_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			remove_modifier = spth_pool_genso
+			add_modifier = {
+				modifier = spth_easy_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_easy_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_easy_genso
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 500
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_new_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_modifier = spth_easy_genso
+					has_modifier = spth_normal_genso
+					has_modifier = spth_hard_genso
+					has_modifier = spth_lunatic_genso
+				}
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			remove_modifier = spth_pool_genso
+			add_modifier = {
+				modifier = spth_new_genso
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_new_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_new_genso
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = spth_genso_num
+				value >= 100
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = spth_pool_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_modifier = spth_new_genso
+					has_modifier = spth_easy_genso
+					has_modifier = spth_normal_genso
+					has_modifier = spth_hard_genso
+					has_modifier = spth_lunatic_genso
+				}
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			remove_modifier = spth_seed_genso
+			add_modifier = {
+				modifier = spth_pool_genso
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_pool_genso
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_modifier = spth_seed_genso
+			}
+			break = yes
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_modifier = spth_pool_genso
+					has_modifier = spth_new_genso
+					has_modifier = spth_easy_genso
+					has_modifier = spth_normal_genso
+					has_modifier = spth_hard_genso
+					has_modifier = spth_lunatic_genso
+				}
+			}
+			break = yes
+		}
+		else = {
+			add_modifier = {
+				modifier = spth_seed_genso
+			}
+		}
+	}
+}

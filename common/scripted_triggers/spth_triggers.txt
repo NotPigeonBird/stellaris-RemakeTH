@@ -1,0 +1,26 @@
+is_spth_leader_skill = {
+	FROMFROM = {
+		exists = leader
+		leader = {
+			has_leader_flag = th_sp_leader
+		}
+	}
+}
+is_spth_js_ship = {
+	is_ship_size = spth_corvette
+}
+
+spth_is_mod_species = {
+	NOR = {
+		is_species_class = MAM
+		is_species_class = REP
+		is_species_class = AVI
+		is_species_class = ART
+		is_species_class = MOL
+		is_species_class = FUN
+		is_species_class = PLANT
+		is_species_class = LITHOID
+		is_species_class = NECROID
+		is_species_class = HUM
+	}
+}

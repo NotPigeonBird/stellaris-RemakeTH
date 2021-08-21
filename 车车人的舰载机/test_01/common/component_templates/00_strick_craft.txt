@@ -1,0 +1,47 @@
+###mending_worker_test###
+
+strike_craft_component_template = {    #声明为舰载机
+	key = "LARGE_WORK_HANGAR_1"        #组件ID
+	size = LARGE                       #隶属槽位，但是不知道为什么是LARGE
+	entity = "fighter_entity"          #设置实体
+	weapon_type = point_defence        #武器类型：舰载机
+	projectile_gfx = "scout_laser_1"   #武器效果贴图
+	power = 0                          #耗电量
+	resources = {                      #资源相关
+		category = ship_components     #指明为舰船经济
+		cost = {                       #制造所需资源                 
+			alloys = 1
+		}
+		upkeep = {                     #维护资源（以每月计算）
+			energy = 0.01
+			alloys = 0.01
+		}
+	}
+	count = 5                          #编队数量
+	regeneration_per_day = 10          #生产能力（按天计算）
+	launch_time = 1                    #发射时间
+	damage = { min = -40 max = -80 }   #伤害
+	cooldown = 2.3                     #冷却
+	range = 100                         #未知
+	engagement_range = 50 #交战范围
+	accuracy = 1.00       #命中
+	tracking = 1.00       #追踪
+	health = 200          #血量
+	armor = 100           #装甲
+	shield = 300          #护盾
+
+	evasion = 0.80     #规避
+	speed = 50         #速度
+	rotation_speed = 2 #旋转速度
+	acceleration = 10  #加速度
+
+	shield_penetration = 1.0  #武器修正：护盾贯穿
+	armor_damage = 1.5        #装甲伤害
+
+	ship_behavior = "workers_behavior"          #舰船行为
+	icon = "GFX_ship_part_strike_craft_scout_1" #图标
+	icon_frame = 1
+	component_set = "WORKER"                  #武器集
+	
+	tags = { weapon_type_strike_craft }       #武器类型：动能，能力~~~
+}

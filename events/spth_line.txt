@@ -1,0 +1,663 @@
+namespace = spth_line
+#开局系统说明
+country_event = {
+	id = spth_line.0
+	title = spth_line.0.name
+	desc = spth_line.0.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+	immediate = {
+		# every_owned_fleet = {
+		# 	delete_fleet = this
+		# }
+		# add_modifier = {
+		# 	modifier = spth_mass_zz
+		# }
+		# add_modifier = {
+		# 	modifier = spth_mass_gy
+		# }
+		# add_modifier = {
+		# 	modifier = spth_mass_ky
+		# }
+		# add_modifier = {
+		# 	modifier = spth_mass_js
+		# }
+		# add_modifier = {
+		# 	modifier = spth_mass_sh
+		# }
+	}
+	option = {
+		name = spth_line.0.a
+		hidden_effect = {
+			if = {
+				limit = {
+					has_origin = origin_gensokyo_leader
+				}
+				country_event = {
+					id = spth_line.1
+					days = 30
+				}
+			}
+			else = {
+				spth_get_random_number = yes
+				country_event = {
+					id = gensokyo_start.1
+				}
+			}
+			#set_country_flag = spth_line_monster
+		}
+	}
+	# ##以后开发的共存线
+	# option = {
+	# 	name = spth_line.0.b
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = spth_line.2
+	# 			days = 180
+	# 			random = 180
+	# 		}
+	# 		set_country_flag = spth_line_both
+	# 	}
+	# }
+}
+#政治家神隐
+country_event = {
+	id = spth_line.1
+	title = spth_line.1.name
+	desc = spth_line.1.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.1.a
+		capital_scope = {
+			remove_building = building_bureaucratic_1
+			add_planet_devastation = 5
+		}
+		add_modifier = {
+			modifier = spth_mass_zz
+		}
+		hidden_effect = {
+			country_event = {
+				id = spth_line.101
+				days = 30
+			}
+		}
+	}
+}
+#舰队背叛
+country_event = {
+	id = spth_line.101
+	title = spth_line.101.name
+	desc = spth_line.101.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.101.a
+		every_owned_fleet = {
+			destroy_fleet = this
+		}
+		capital_scope = {
+			add_planet_devastation = 5
+		}
+		add_modifier = {
+			modifier = spth_mass_js
+		}
+		hidden_effect = {
+			country_event = {
+				id = spth_line.102
+				days = 30
+			}
+		}
+	}
+}
+#工厂遭到袭击
+country_event = {
+	id = spth_line.102
+	title = spth_line.102.name
+	desc = spth_line.102.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.102.a
+		capital_scope = {
+			remove_district = district_industrial
+			add_planet_devastation = 10
+		}
+		add_modifier = {
+			modifier = spth_mass_gy
+		}
+		hidden_effect = {
+			country_event = {
+				id = spth_line.103
+				days = 30
+			}
+		}
+	}
+}
+#社会动荡
+country_event = {
+	id = spth_line.103
+	title = spth_line.103.name
+	desc = spth_line.103.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.103.a
+		capital_scope = {
+			add_planet_devastation = 5
+		}
+		add_modifier = {
+			modifier = spth_mass_sh
+		}
+		hidden_effect = {
+			country_event = {
+				id = spth_line.104
+				days = 30
+			}
+		}
+	}
+}
+#科学家被调用且受到阻碍
+country_event = {
+	id = spth_line.104
+	title = spth_line.104.name
+	desc = spth_line.104.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.104.a
+		add_modifier = {
+			modifier = spth_mass_ky
+		}
+		hidden_effect = {
+			country_event = {
+				id = spth_line.105
+				days = 45
+			}
+		}
+	}
+}
+#路线选择1——妖怪的和平派的接触
+country_event = {
+	id = spth_line.105
+	title = spth_line.105.name
+	desc = spth_line.105.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+	#共存线
+	option = {
+		name = spth_line.105.a
+		hidden_effect = {
+			country_event = {
+				id = spth_line.110
+				days = 30
+			}
+		}
+	}
+	#对抗线
+	# option = {
+	# 	name = spth_line.105.b
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = spth_line.120
+	# 			random = 30
+	# 		}
+	# 	}
+	# }
+}
+#共存线1——后吸血鬼异变
+country_event = {
+	id = spth_line.110
+	title = spth_line.110.name
+	desc = {
+		text = spth_line.110.desc
+		# trigger = {
+		# 	NOT = { has_country_flag = spth_line_1 }
+		# }
+	}
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+	#共存线
+	option = {
+		name = spth_line.110.a
+		trigger = {
+			NOT = { has_country_flag = spth_line_1 }
+		}
+		hidden_effect = {
+			#set_country_flag = spth_line_1
+			country_event = {
+				id = spth_line.111
+				days = 30
+			}
+		}
+	}
+}
+#共存线2——
+country_event = {
+	id = spth_line.111
+	title = spth_line.111.name
+	desc = spth_line.111.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.111.a
+		hidden_effect = {
+			country_event = {
+				id = spth_line.2
+				days = 30
+			}
+		}
+	}
+}
+#陨石群袭来
+country_event = {
+	id = spth_line.2
+	title = spth_line.2.name
+	desc = spth_line.2.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	immediate = {
+		random_owned_fleet = {
+			limit = {
+				is_ship_class = shipclass_starbase
+			}
+			destroy_fleet = this
+		}
+		random_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			save_event_target_as = capital@root
+		}
+		create_country = {
+			name = "NAME_Incoming_Asteroid"
+			type = faction
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "zoological"
+					file = "flag_zoological_1.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				establish_communications_no_message = root.owner
+			}
+		}
+		last_created_country = {
+			set_country_flag = incoming_asteroid
+			create_fleet = {
+				name = "NAME_Asteroid"
+				effect = {
+					set_aggro_range = 0
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_owner = PREV
+					set_fleet_flag = asteroid_fleet
+					save_event_target_as = asteroid_fleet_target
+					while = {
+						count = 60
+						create_ship = {
+							name = "NAME_Asteroid"
+							design = "NAME_Asteroid"
+						}
+					}
+					set_location = {
+						target = root.capital_scope
+						distance = 400
+						angle = random
+					}
+					last_created_fleet = {
+						every_owned_ship = {
+							add_modifier = {
+								modifier = spth_speed_mult
+							}
+						}
+					}
+					queue_actions = {
+						move_to = event_target:capital@root
+						effect = {
+							id = "spth_ast.1"
+							ROOT = {
+								country_event = { id = spth_line.3 }
+							}
+						}
+					}
+				}
+			}
+			set_relation_flag = {
+				who = root.owner
+				flag = asteroid_enemy
+			}
+		}
+	}
+	option = {
+		name = spth_line.2.a
+
+		remove_modifier = spth_mass_js
+		add_modifier = {
+			modifier = spth_rebuild_js
+		}
+		remove_modifier = spth_mass_gy
+		add_modifier = {
+			modifier = spth_rebuild_gy
+		}
+	}
+}
+#陨石撞击结果
+country_event = {
+	id = spth_line.3
+	title = spth_line.3.name
+	desc = {
+		text = spth_line.3.desc
+		# trigger = {
+		# 	has_country_flag = spth_line_monster
+		# }
+	}
+	# desc = {
+	# 	text = spth_line.3.both.desc
+	# 	trigger = {
+	# 		has_country_flag = spth_line_both
+	# 	}
+	# }
+	# picture = {
+	# 	picture = GFX_evt_th_alice
+	# 	trigger = {
+	# 		has_country_flag = spth_line_monster
+	# 	}
+	# }
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+	immediate = {
+		solar_system = {
+			random_fleet_in_system = {
+				limit = {
+					has_fleet_flag = asteroid_fleet
+				}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	option = {
+		name = spth_line.3.a
+		# trigger = {
+		# 	has_country_flag = spth_line_monster
+		# }
+		hidden_effect = {
+			#set_country_flag = spth_line.4.0
+			country_event = {
+				id = spth_line.4
+				random = 30
+			}
+		}
+	}
+	# option = {
+	# 	name = spth_line.3.b
+	# 	trigger = {
+	# 		has_country_flag = spth_line_both
+	# 	}
+	# 	remove_modifier = spth_mass_sh
+	# 	add_modifier = {
+	# 		modifier = spth_rebuild_sh
+	# 	}
+	# }
+	# option = {
+	# 	name = spth_line.3.c
+	# }
+}
+# #妖怪线——纯狐登场
+# country_event = {
+# 	id = spth_line.4
+# 	title = spth_line.4.name
+# 	#初见描述
+# 	desc = {
+# 		text = spth_line.4.1.desc
+# 		trigger = { has_country_flag = spth_line.4.0 }
+# 	}
+# 	#后续描述
+# 	desc = {
+# 		text = spth_line.4.1.desc
+# 		trigger = {
+# 			has_country_flag = spth_line.4.1
+# 		}
+# 	}
+# 	desc = {
+# 		text = spth_line.4.2.desc
+# 		trigger = {
+# 			has_country_flag = spth_line.4.2
+# 		}
+# 	}
+# 	is_triggered_only = yes
+
+# 	# trigger = {
+# 	# 	has_country_flag = spth_change_point
+# 	# }
+
+# 	diplomatic_title = BLANK_STRING
+# 	diplomatic = yes
+# 	#force_open = yes
+	
+# 	picture_event_data = {
+# 		room = spth_ch_room
+# 	}
+	
+# 	###初次介绍（询问陨石）
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			 has_country_flag = spth_line.4.0
+# 		}
+# 		name = spth_line.4.0.a
+# 		is_dialog_only = yes
+# 		response_text = spth_line.4.0.res
+# 	}
+# 	###初次介绍（自我介绍）
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			 has_country_flag = spth_line.4.0
+# 		}
+# 		name = spth_line.4.0.b
+# 		hidden_effect = {
+# 			remove_country_flag = spth_line.4.0
+# 			set_country_flag = spth_line.4.1
+# 		}
+# 		is_dialog_only = yes
+# 	}
+# 	#后续介绍
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			 has_country_flag = spth_line.4.1
+# 		}
+# 		name = spth_line.4.1.a
+# 		hidden_effect = {
+# 			remove_country_flag = spth_line.4.1
+# 			set_country_flag = spth_line.4.2
+# 		}
+# 		is_dialog_only = yes
+# 	}
+# 	##自闭与开放选择
+# 	#自闭
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			 has_country_flag = spth_line.4.2
+# 		}
+# 		name = spth_line.4.2.a
+# 		custom_tooltip = spth_line.4.2.a.tooltip
+# 		hidden_effect = {
+# 			remove_country_flag = spth_line.4.2
+# 			set_country_flag = spth_line.4.3
+# 			capital_scope = {
+# 				solar_system = {
+# 					every_neighbor_system = {
+# 						remove_hyperlane = {
+# 							from = THIS
+# 							to = PREV
+# 						}
+# 						set_star_flag = spth_hyper_to@root
+# 					}
+# 				}
+# 			}
+# 			country_event = {
+# 				id = spth_line.4
+# 			}
+# 		}
+# 		is_dialog_only = yes
+# 	}
+# 	#不自闭
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			 has_country_flag = spth_line.4.2
+# 		}
+# 		name = spth_line.4.2.b
+# 		hidden_effect = {
+# 			remove_country_flag = spth_line.4.2
+# 			set_country_flag = spth_line.4.3
+# 		}
+# 		is_dialog_only = yes
+# 	}
+# 	###升级
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			has_country_flag = spth_fight_little_devil_fisrt_lvup
+# 			NOT = {
+# 				has_country_flag = spth_ship_changing
+# 			}
+# 		}
+# 		name = spth_fight_little_devil.1001.b
+# 		hidden_effect = {
+# 			country_event = { id = spth_fight_little_devil.1002 }
+# 		}
+# 	}
+# 	###进化
+# 	option = {
+# 		custom_gui = "enclave_curator_option"
+# 		trigger = {
+# 			has_country_flag = spth_fight_little_devil_fisrt_lvup
+# 			NOT = {has_country_flag = spth_ship_changing}
+# 		}
+# 		name = spth_fight_little_devil.1001.c
+# 		hidden_effect = {
+# 			country_event = { id = spth_fight_little_devil.1003 }
+# 		}
+# 	}
+		
+# 	###退出
+# 	option = { 
+# 		custom_gui = "enclave_curator_option"
+# 		name = spth_fight_little_devil.1001.z
+# 		remove_country_flag = spth_change_point
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {NOT = {has_country_flag = spth_fight_little_devil_fisrt_lvup}}
+# 				set_country_flag = spth_fight_little_devil_fisrt_lvup
+# 				set_variable = {
+# 					which = spth_fire_points
+# 					value = 10
+# 				}
+# 				set_variable = {
+# 					which = spth_body_points
+# 					value = 10
+# 				}
+# 				set_variable = {
+# 					which = spth_speed_points
+# 					value = 10
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+country_event = {
+	id = spth_line.4
+	title = spth_line.4.name
+	desc = spth_line.4.desc
+	picture = GFX_evt_th_alice
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_gensokyo
+	}
+
+	option = {
+		name = spth_line.4.a
+		hidden_effect = {
+			country_event = {
+				id = gensokyo_start.1
+			}
+		}
+	}
+}
+# country_event = {
+# 	id = spth_line.1
+# 	title = spth_line.1.name
+# 	desc = spth_line.1.desc
+# 	picture = GFX_evt_th_alice
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_authority = auth_gensokyo
+# 	}
+
+
+# }
+# country_event = {
+# 	id = spth_line.1
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_authority = auth_gensokyo
+# 	}
+
+
+# }

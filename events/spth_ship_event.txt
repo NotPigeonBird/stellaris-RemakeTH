@@ -1,0 +1,124 @@
+namespace = spth_ship
+#领袖船死亡判定
+ship_event = {
+	id = spth_ship.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ship_size = spth_corvette
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					THIS = {
+						has_ship_flag = spth_leader_ship
+					}
+				}
+			}
+			This = {delete_ship = this}
+		}
+		else = {
+			save_event_target_as = spth_disabled_leader_ship
+			owner = {
+				country_event = {
+					id = spth_ship.2
+				}
+			}
+			fleet = {
+				set_event_locked = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = spth_ship.2
+	title = "spth_ship.2.name"
+	desc = "spth_ship.2.desc"
+	picture = GFX_evt_enigmatic_fortress
+	show_sound = event_mystic_reveal
+	location = event_target:spth_disabled_leader_ship
+	trackable = yes
+	
+	is_triggered_only = yes
+
+	####原地跑尸复活或回首都复活
+	option = {
+		name = "spth_ship.2.a"
+		custom_tooltip = spth_ship.2.a.tooltip
+		hidden_effect = {
+			event_target:spth_disabled_leader_ship = {
+				enable_special_project = {
+					name = "spth_disabled_leader_ship_revive"
+					location = this
+					owner = ROOT
+				}
+			}
+			capital_scope = {
+				enable_special_project = {
+					name = "spth_disabled_leader_ship_revive_cap"
+					location = this
+					owner = root
+				}
+			}
+		}
+	}
+	####原地残机复活
+	option = {
+		name = "spth_ship.2.b"
+		allow = {
+			custom_tooltip = {
+				fail_text = zero_life_to_up
+				check_variable = {
+					which = spth_leader_life
+					value > 0
+				}
+            }
+		}
+		custom_tooltip = spth_ship.2.b.tooltip
+		hidden_effect = {
+			subtract_variable = {
+				which = spth_leader_life
+				value = 1
+			}
+			event_target:spth_disabled_leader_ship = {
+				set_disabled = no
+				repair_ship = yes
+			}
+		}
+	}
+}
+ship_event = {
+	id = spth_ship.10
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ship_size = spth_corvette
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					THIS = {
+						has_ship_flag = spth_leader_ship
+					}
+				}
+			}
+			This = {delete_ship = this}
+		}
+		else = {
+			save_event_target_as = spth_disabled_leader_ship
+			owner = {
+				country_event = {
+					id = spth_ship.2
+				}
+			}
+		}
+	}
+}

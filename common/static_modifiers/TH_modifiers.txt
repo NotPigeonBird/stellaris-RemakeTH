@@ -1,0 +1,379 @@
+#########星球修正
+th_planet_jin_1 = {
+	planet_building_build_speed_mult = 1.00
+	planet_buildings_cost_mult = 0.1
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_jin_1.dds"
+	icon_frame = 1
+}
+th_planet_jin_2 = {
+	planet_building_build_speed_mult = 2.00
+	planet_buildings_cost_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_jin_2.dds"
+	icon_frame = 1
+}
+th_planet_mu_1 = {
+	custom_tooltip = th_planet_mu_1.desc
+	planet_jobs_food_upkeep_mult = 2
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_mu_1.dds"
+	icon_frame = 1
+}
+th_planet_mu_2 = {
+	custom_tooltip = th_planet_mu_2.desc
+	planet_jobs_consumer_goods_upkeep_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_mu_2.dds"
+	icon_frame = 1
+}
+th_planet_shui_1 = {
+	custom_tooltip = th_planet_shui_1.desc
+	planet_jobs_consumer_goods_upkeep_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_shui_1.dds"
+	icon_frame = 1
+}
+th_planet_shui_2 = {
+	custom_tooltip = th_planet_shui_2.desc
+	planet_jobs_consumer_goods_upkeep_mult = 0.4
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_shui_2.dds"
+	icon_frame = 1
+}
+th_planet_huo_1 = {
+	custom_tooltip = th_planet_huo_1.desc
+	planet_jobs_minerals_upkeep_mult = 0.5
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_huo_1.dds"
+	icon_frame = 1
+}
+th_planet_huo_2 = {
+	custom_tooltip = th_planet_huo_2.desc
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_huo_2.dds"
+	icon_frame = 1
+}
+th_planet_tu_1 = {
+	custom_tooltip = th_planet_tu_1.desc
+	planet_jobs_minerals_upkeep_mult = 2
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_tu_1.dds"
+	icon_frame = 1
+}
+th_planet_tu_2 = {
+	custom_tooltip = th_planet_tu_2.desc
+	planet_jobs_consumer_goods_upkeep_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_tu_2.dds"
+	icon_frame = 1
+}
+th_planet_ri_1 = {
+	custom_tooltip = th_planet_ri_1.desc
+	planet_jobs_energy_upkeep_mult = 5
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_ri_1.dds"
+	icon_frame = 1
+}
+th_planet_yue_1 = {
+	custom_tooltip = th_planet_yue_1.desc
+	planet_jobs_consumer_goods_upkeep_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_yue_1.dds"
+	icon_frame = 1
+}
+th_planet_xzzs_1 = {
+	custom_tooltip = th_planet_xzzs_1.desc
+	planet_jobs_upkeep_mult = 2
+	planet_pops_upkeep_mult = 2
+	planet_building_build_speed_mult = 1.00
+	planet_buildings_cost_mult = 0.1
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_xzzs_1.dds"
+	icon_frame = 1
+}
+th_planet_xzzs_2 = {
+	custom_tooltip = th_planet_xzzs_2.desc
+	planet_jobs_upkeep_mult = 6
+	planet_pops_upkeep_mult = 6
+	planet_building_build_speed_mult = 2.00
+	planet_buildings_cost_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/th_planet_xzzs_2.dds"
+	icon_frame = 1
+}
+
+spth_hm_start_grow = {
+	pop_growth_speed = 9.3
+	planet_jobs_unity_produces_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/spth_hm_start_grow.dds"
+	icon_frame = 1
+}
+spth_gsk_start_grow = {
+	pop_growth_speed = 9.3
+	icon = "gfx/interface/icons/planet_modifiers/spth_gsk_start_grow.dds"
+	icon_frame = 1
+}
+spth_workers_power = {
+	planet_jobs_worker_produces_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/spth_workers_power.dds"
+	icon_frame = 1
+}
+spth_sdgz_ky_modifier_1 = {
+	planet_jobs_physics_research_produces_mult = 0.2
+	planet_jobs_engineering_research_produces_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/spth_sdgz_ky_modifier_1.dds"
+	icon_frame = 1
+}
+spth_genso_num_look = {
+	icon = "gfx/interface/icons/planet_modifiers/spth_genso_num_look.dds"
+	icon_frame = 1
+}
+#########国家修正
+spth_alloys_reduce = {
+	country_base_alloys_produces_add = -10
+}
+#开局debuff
+spth_mass_zz = {
+	country_unity_produces_mult = -0.5
+	country_influence_produces_mult = -0.5
+}
+spth_rebuild_zz = {
+	country_unity_produces_mult = -0.1
+	country_influence_produces_mult = -0.1
+}
+spth_normal_zz = {
+	country_unity_produces_mult = 0.2
+	country_influence_produces_mult = 0.2
+}
+spth_genso_zz = {
+	country_unity_produces_mult = 0.7
+	country_influence_produces_mult = 0.7
+}
+
+spth_mass_gy = {
+	country_alloys_produces_mult = -0.5
+	country_consumer_goods_produces_mult = -0.5
+	starbase_shipyard_build_cost_mult = 3
+}
+spth_rebuild_gy = {
+	country_alloys_produces_mult = -0.1
+	country_consumer_goods_produces_mult = -0.1
+	starbase_shipyard_build_cost_mult = 0.5
+}
+spth_normal_gy = {
+	country_alloys_produces_mult = 0.15
+	country_consumer_goods_produces_mult = 0.15
+}
+spth_genso_gy = {
+	country_alloys_produces_mult = 0.7
+	country_consumer_goods_produces_mult = 0.7
+}
+
+spth_mass_ky = {
+	all_technology_research_speed = -0.5
+}
+spth_rebuild_ky = {
+	all_technology_research_speed = -0.2
+}
+spth_normal_ky = {
+	all_technology_research_speed = 0.1
+}
+spth_genso_ky = {
+	all_technology_research_speed = 0.4
+}
+
+spth_mass_js = {
+	ship_fire_rate_mult = -0.5
+	ship_weapon_damage = -0.5
+}
+spth_rebuild_js = {
+	ship_fire_rate_mult = 0
+	ship_weapon_damage = 0
+}
+spth_normal_js = {
+	ship_fire_rate_mult = 0.5
+	ship_weapon_damage = 0.5
+}
+spth_genso_js = {
+	ship_fire_rate_mult = 2
+	ship_weapon_damage = 2
+}
+spth_mass_sh = {
+	planet_jobs_produces_mult = -0.2
+	pop_growth_speed = -0.3
+}
+spth_rebuild_sh = {
+	pop_growth_speed = -0.1
+}
+spth_normal_sh = {
+	planet_jobs_produces_mult = 0.2
+	pop_growth_speed = 0.1
+}
+spth_genso_sh = {
+	planet_jobs_produces_mult = 0.5
+	pop_growth_speed = 0.5
+}
+
+spth_sdgz_gy_finish = {
+	icon = "gfx/interface/icons/modifiers/mod_job_alloy_drone.dds"
+	country_base_sr_lingli_produces_add = -1
+	country_alloys_produces_mult = 0.1
+	country_consumer_goods_produces_mult = 0.1
+}
+spth_sdgz_ky_finish = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_technology.dds"
+	country_base_sr_lingli_produces_add = -1
+	all_technology_research_speed = 0.1
+}
+spth_sdgz_js_finish = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_military.dds"
+	country_base_sr_lingli_produces_add = -1
+	ship_fire_rate_mult = 0.2
+	ship_weapon_damage = 0.2
+}
+
+spth_gensokyo_new_start = {
+	country_unity_produces_mult = 0.2
+	country_influence_produces_mult = 0.2
+}
+spth_vampire_dominate = {
+	pop_growth_speed = 0.3
+}
+spth_lingli_control = {
+	country_sr_lingli_produces_mult = 1
+}
+spth_fuka_rule = {
+	leader_skill_levels = 2
+	country_leader_pool_size = 1
+	species_leader_exp_gain = 0.5
+	country_command_limit_add = 30
+}
+spth_genso_science = {
+	planet_jobs_physics_research_produces_mult = 0.1
+	planet_jobs_society_research_produces_mult = 0.1
+	planet_jobs_engineering_research_produces_mult = 0.1
+}
+spth_lingli_reduce = {
+	country_sr_lingli_produces_mult = -0.1
+}
+spth_lingli_reduce_edict = {
+	country_base_sr_lingli_produces_add = -1
+}
+# gs_num <= 100
+spth_seed_genso = {
+	pop_growth_speed_reduction = 0.1
+	pop_growth_speed = -0.3
+	planet_jobs_produces_mult = 0.1
+	planet_jobs_upkeep_mult = 0.1
+	planet_pops_upkeep_mult = 0.1
+}
+# gs_num <= 500
+spth_pool_genso = {
+	pop_growth_speed_reduction = 0.2
+	pop_growth_speed = -0.2
+	planet_jobs_produces_mult = 0.2
+	planet_jobs_upkeep_mult = 0.2
+	planet_pops_upkeep_mult = 0.2
+}
+# gs_num <= 1000
+spth_new_genso = {
+	pop_growth_speed_reduction = 0.3
+	planet_jobs_produces_mult = 0.3
+	planet_jobs_upkeep_mult = 0.3
+	planet_pops_upkeep_mult = 0.3
+}
+# gs_num <= 3000
+spth_easy_genso = {
+	pop_growth_speed_reduction = 0.35
+	pop_growth_speed = 0.2
+	planet_jobs_produces_mult = 0.5
+	planet_jobs_upkeep_mult = 0.5
+	planet_pops_upkeep_mult = 0.5
+}
+# gs_num <= 5000
+spth_normal_genso = {
+	pop_growth_speed_reduction = 0.4
+	pop_growth_speed = 0.4
+	planet_jobs_produces_mult = 0.8
+	planet_jobs_upkeep_mult = 0.8
+	planet_pops_upkeep_mult = 0.8
+}
+# gs_num <= 8000
+spth_hard_genso = {
+	pop_growth_speed_reduction = 0.45
+	pop_growth_speed = 0.6
+	planet_jobs_produces_mult = 1.3
+	planet_jobs_upkeep_mult = 1.3
+	planet_pops_upkeep_mult = 1.3
+}
+# gs_num <= 10000
+spth_lunatic_genso = {
+	pop_growth_speed_reduction = 0.5
+	pop_growth_speed = 1
+	planet_jobs_produces_mult = 2.1
+	planet_jobs_upkeep_mult = 2.1
+	planet_pops_upkeep_mult = 2.1
+}
+# gs_num > 10000
+spth_extra_genso = {
+	pop_growth_speed_reduction = 0.8
+	pop_growth_speed = 1.6
+	planet_jobs_produces_mult = 4
+	planet_jobs_upkeep_mult = 4
+	planet_pops_upkeep_mult = 4
+}
+#########P点
+spth_p_lv1 = {
+	weapon_type_lingli_weapon_damage_mult = 0.1
+	weapon_type_lingli_weapon_fire_rate_mult = 0.1
+}
+spth_p_lv2 = {
+	weapon_type_lingli_weapon_damage_mult = 0.2
+	weapon_type_lingli_weapon_fire_rate_mult = 0.2
+}
+spth_p_lv3 = {
+	weapon_type_lingli_weapon_damage_mult = 0.3
+	weapon_type_lingli_weapon_fire_rate_mult = 0.3
+}
+spth_p_lv4 = {
+	weapon_type_lingli_weapon_damage_mult = 0.4
+	weapon_type_lingli_weapon_fire_rate_mult = 0.4
+}
+spth_p_lv5 = {
+	weapon_type_lingli_weapon_damage_mult = 0.5
+	weapon_type_lingli_weapon_fire_rate_mult = 0.5
+}
+spth_p_lv6 = {
+	weapon_type_lingli_weapon_damage_mult = 0.6
+	weapon_type_lingli_weapon_fire_rate_mult = 0.6
+}
+spth_p_lv7 = {
+	weapon_type_lingli_weapon_damage_mult = 0.7
+	weapon_type_lingli_weapon_fire_rate_mult = 0.7
+}
+spth_p_max = {
+	weapon_type_lingli_weapon_damage_mult = 0.8
+	weapon_type_lingli_weapon_fire_rate_mult = 0.8
+}
+#########特性
+on_latency = {
+         country_starbase_influence_cost_mult = -0.8
+}
+on_cannonball = {
+		 ship_evasion_mult = 0.5
+}
+on_hakkero = {
+		 ship_speed_mult = 0.5
+}
+on_yakumo = {
+	    ship_ftl_jumpdrive_range_mult = 5
+}
+########加点
+spth_fire_up = {
+	ship_weapon_damage = 0.2
+	ship_fire_rate_mult = 0.05
+}
+spth_body_up = {
+	ship_hull_mult = 0.11
+	ship_armor_mult = 0.11
+	ship_shield_mult = 0.11
+}
+spth_speed_up = {
+	ship_fire_rate_mult = 0.05
+	ship_speed_mult = 0.08
+}
+########战斗特效
+m_the_world_1 = {
+		ship_speed_mult = -1
+		ship_fire_rate_mult = -1
+}
+spth_speed_mult = {
+	ship_speed_mult = 10
+}

@@ -1,0 +1,42 @@
+origin_gensokyo_leader = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_origin_gensokyo_leader
+
+	possible = {
+		authority = {
+			value = auth_gensokyo
+		}
+		always = no
+	}
+
+	random_weight = {
+		base = 0
+	}
+	description = "origin_tooltip_gensokyo_leader_effects"
+
+	advanced_start = yes
+}
+origin_gensokyo_change_species = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_origin_gensokyo_change_species
+
+	possible = {
+		authority = {
+			value = auth_gensokyo
+		}
+		species = {
+			value = TOUHOUGIRLS
+		}
+	}
+	traits = {
+		trait = trait_touhou
+	}
+	random_weight = {
+		base = 0
+	}
+	description = "origin_tooltip_gensokyo_change_species_effects"
+
+	advanced_start = yes
+}

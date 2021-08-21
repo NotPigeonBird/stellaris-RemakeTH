@@ -1,0 +1,235 @@
+district_gensokyo_mosen = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	icon = district_gensokyo_mosen
+	
+	show_on_uncolonized = {
+		OR = {
+			uses_district_set = gensokyo_planet
+		}
+	}
+	
+	potential = {
+		OR = {
+			uses_district_set = gensokyo_planet
+		}
+	}
+	
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 8000
+			sr_lingli = 300
+		}
+		produces = {
+			exotic_gases = 2
+			rare_crystals = 2
+			volatile_motes = 2
+		}
+		upkeep = {
+			sr_lingli = 3
+		}
+	}
+
+	planet_modifier = {
+		job_mogu_girl_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = spth_hakurei_start
+			}
+		}
+		modifier = {
+			job_spth_renou_add = 1
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+district_gensokyo_yaoguai = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	icon = district_gensokyo_yaoguai
+	
+	show_on_uncolonized = {
+		OR = {
+			uses_district_set = gensokyo_planet
+		}
+	}
+	
+	potential = {
+		uses_district_set = gensokyo_planet
+	}
+	
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 8000
+			sr_lingli = 300
+		}
+		upkeep = {
+			alloys = 10
+			sr_lingli = 1
+		}
+	}
+
+	planet_modifier = {
+		job_spth_shielder_add = 2
+	}
+
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_regular_empire = yes
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_huahua_add = 1
+	# 		job_wenwen_add = 1
+	# 	}
+	# }
+
+	ai_weight = {
+		weight = 1
+	}
+}
+district_gensokyo_jiqiao = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	icon = district_gensokyo_jiqiao
+	
+	show_on_uncolonized = {
+		OR = {
+			uses_district_set = gensokyo_planet
+		}
+	}
+	
+	potential = {
+		uses_district_set = gensokyo_planet
+	}
+	
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			sr_lingli = 1000
+		}
+		upkeep = {
+			sr_lingli = 4
+		}
+	}
+
+	planet_modifier = {
+		job_spth_jiqiao_add = 3
+	}
+
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_regular_empire = yes
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_huahua_add = 1
+	# 		job_wenwen_add = 1
+	# 	}
+	# }
+
+	ai_weight = {
+		weight = 1
+	}
+}
+district_gensokyo_shengong = {
+	base_buildtime = 900
+	is_capped_by_modifier = no
+	icon = district_gensokyo_shengong
+	
+	show_on_uncolonized = {
+		OR = {
+			uses_district_set = gensokyo_planet
+		}
+	}
+	
+	potential = {
+		uses_district_set = gensokyo_planet
+	}
+	
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			sr_lingli = 1000
+		}
+		produces = {
+			physics_research = 33
+			engineering_research = 33
+			society_research = 33
+		}
+		upkeep = {
+			sr_lingli = 6
+		}
+	}
+
+	planet_modifier = {
+		job_spth_shengong_add = 1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+	}
+
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_regular_empire = yes
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_huahua_add = 1
+	# 		job_wenwen_add = 1
+	# 	}
+	# }
+
+	ai_weight = {
+		weight = 1
+	}
+}

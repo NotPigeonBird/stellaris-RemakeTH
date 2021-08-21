@@ -1,0 +1,9 @@
+THSC = {
+	GSKG = {
+		name = "幻想种"
+		plural = "幻想种们"
+		home_planet = "幻想乡"
+		home_system = "幻想乡"
+		name_list = "touhouchs"
+	}
+}

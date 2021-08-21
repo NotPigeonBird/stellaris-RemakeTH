@@ -1,0 +1,8 @@
+spth_10years_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_gensokyo.dds"
+	picture = GFX_evt_spth_news
+}
+spth_lingli_theory = {
+	icon = "gfx/interface/icons/situation_log/situation_log_gensokyo.dds"
+	picture = GFX_evt_bowuji
+}

@@ -1,0 +1,37 @@
+# sakuya_the_world = {
+# 		every_combatant_fleet = {
+# 				add_modifier = { modifier = m_the_world_1  days = 30 }
+# 		}
+# }
+spth_do_skill = {
+	if = {
+		limit = {
+			leader = {
+				has_trait = js_leader_trait_$LEADER$_0
+			}
+		}
+		# random_owned_ship = {
+		# 	limit = {
+		# 		has_ship_flag = spth_$LEADER$_ship
+		# 	}
+		# 	set_variable = {
+		# 		which = spth_js_$LEADER$_0_final
+		# 		value = leader
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = spth_js_skill_$LEADER$_0
+		# 		multiplier = spth_js_hml_0_final
+		# 		days = 10
+		# 	}
+		# }
+		set_variable = {
+			which = spth_js_$LEADER$_0_final
+			value = leader
+		}
+		add_modifier = {
+			modifier = spth_js_skill_$LEADER$_0
+			multiplier = spth_js_hml_0_final
+			days = 10
+		}
+	}
+}

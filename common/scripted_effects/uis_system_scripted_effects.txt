@@ -1,0 +1,210 @@
+#特殊星系刷新资源
+spth_special_resources = {
+	every_system_planet = {	
+		limit = {
+			colonizeable_planet = no
+			NOT = { has_planet_flag = starting_deposit }
+		}
+		clear_deposits = yes
+	}
+	
+	system_star = {
+		if = {
+			limit = {
+				NOT = { has_planet_flag = starting_deposit }
+			}
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+			set_deposit = d_energy_4
+		}
+	}
+	
+	while = {
+		count = 2
+		random_system_planet = {
+			limit = {
+				NOR = {
+					has_planet_flag = starting_deposit
+					has_planet_flag = has_megastructure
+				}
+				OR = {	
+					is_star = yes
+					is_planet_class = pc_gas_giant
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+				}
+			}
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+			set_deposit = d_energy_4
+		}
+	}
+	
+	while = {
+		count = 3
+		random_system_planet = {
+			limit = {
+				NOR = { 
+					has_planet_flag = starting_deposit
+					has_planet_flag = has_megastructure
+				}
+				OR = {	
+					is_asteroid = yes
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_molten
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_toxic
+					is_planet_class = pc_frozen
+				}
+			}
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+			set_deposit = d_minerals_4
+		}
+	}
+	
+	while = {
+		count = 2
+		random_system_planet = {
+			limit = {
+				NOR = { 
+					has_planet_flag = starting_deposit
+					has_planet_flag = has_megastructure
+				}
+				OR = {	
+					is_planet_class = pc_gas_giant
+					is_planet_class = pc_shielded
+					is_planet_class = pc_toxic
+					is_planet_class = pc_frozen
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_barren
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_shrouded
+				}
+			}
+			set_planet_flag = starting_research_target
+			set_planet_flag = starting_deposit
+			add_deposit = d_physics_1
+			add_deposit = d_society_1
+			add_deposit = d_engineering_1
+		}
+	}
+}
+
+#全部星球刷新资源
+uis_special_resources_extra = {
+	every_system_planet = {	
+		limit = {
+			colonizeable_planet = no
+		}
+		clear_deposits = yes
+	}
+	
+	every_system_planet = {
+		if = { 
+			limit = { 
+				OR = {
+					is_star = yes
+					is_planet_class = pc_molten
+					is_planet_class = pc_gas_giant
+				}
+			}
+			set_deposit = d_energy_8
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+		}
+		else_if = { 
+			limit = {
+				OR = {	
+					is_asteroid = yes
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_frozen
+				}
+			}
+			set_deposit = d_minerals_8
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+		}
+		else_if = { 
+			limit = {
+				OR = {
+					is_planet_class = pc_shielded
+					is_planet_class = pc_toxic
+				}
+			}
+			add_deposit = d_physics_3
+			add_deposit = d_society_3
+			add_deposit = d_engineering_3
+			set_planet_flag = starting_research_target
+			set_planet_flag = starting_deposit
+		}
+	}
+}
+
+#星堡创建
+create_uis_citadel = {
+	create_starbase = {
+		size = "starbase_starport"
+
+		module = "shipyard"
+		module = "gun_battery"
+
+		building = "crew_quarters"
+	}
+}
+
+#舰队创建
+create_uis_fleet = {
+	create_fleet = {
+		effect = {
+			set_owner = prev
+			create_ship = {
+				name = random
+				random_existing_design = science
+			}
+			set_fleet_stance = evasive				
+			set_location = prev.capital_scope.star
+			owner = {
+				create_leader = {
+					class = scientist
+					sub_type = survey
+					name = random
+					species = owner_main_species
+				}
+			}
+			set_leader = last_created_leader
+		}			
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev
+			create_ship = {
+				name = random
+				random_existing_design = constructor
+			}
+			set_fleet_stance = evasive
+			set_location = prev.capital_star
+		}
+	}
+	create_fleet = {
+		set_take_point = yes
+		effect = {
+			set_owner = prev
+			while = {
+				count = 3
+				create_ship = {
+					name = random
+					random_existing_design = corvette
+				}
+			}
+			set_location = prev.capital_star
+		}
+	}
+}

@@ -1,0 +1,25 @@
+namespace = spth_skill
+country_event = {
+	id = spth_skill.0
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_spth_leader_skill = yes
+	}
+	immediate = {
+		FROMFROM = {
+			leader = {
+				switch = {
+					trigger = has_leader_flag
+					spth_hml = { FROMFROM = { spth_do_skill = { LEADER = hml } } }
+				}
+			}
+		}
+		THIS = {
+			country_event = {
+				id = spth_skill.0
+				days = 10
+			}
+		}
+	}
+}

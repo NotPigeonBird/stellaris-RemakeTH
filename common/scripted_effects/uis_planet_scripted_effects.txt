@@ -1,0 +1,716 @@
+#嵌入
+uis_home_planet_first_pass = {
+
+
+	#口袋星簇
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_zb2_planet
+		}
+		owner = {
+			set_country_flag = encountered_first_wormhole
+			add_seen_bypass_type = wormhole
+		}
+	}
+	
+	#西纳普斯
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_zb3_planet
+		}
+		solar_system = {
+			save_event_target_as = spth_prefer_system
+		}
+		save_event_target_as = spth_prefer_planet
+		random_system = {
+			limit = {
+				has_star_flag = uis_zb3_n02_system
+			}
+			set_name = event_target:uis_prefer_system
+			create_uis_citadel = yes
+			random_system_planet = {
+				limit = { 
+					is_colonizable = yes 
+					is_colony = no
+					is_planet_class = pc_habitat
+				}
+				uis_hab_creatcolony = yes
+				uis_hab_creatcolony_extra = yes
+				set_name = "UIS_NAME_planet_skytemp"
+				clear_deposits = yes
+				add_deposit = d_uisstonewish
+			}
+			every_system_planet = {
+				if = {
+					limit = {
+						is_colonizable = yes 
+						is_colony = no
+					}
+					uis_creatcolony_extra = yes
+					set_name = event_target:uis_prefer_planet
+					set_owner = root
+					set_controller = root
+					set_capital = yes
+					create_uis_homeworld = yes
+				}
+				else_if = {
+					limit = { 
+						has_deposit_for = shipclass_mining_station
+						has_mining_station = no
+					}
+					create_mining_station = { owner = root }
+				}
+			}
+			every_neighbor_system = {
+				random_system_planet = {
+					limit = {
+						is_colonizable = yes 
+						is_colony = no
+					}
+					uis_planetpreference = yes
+				}
+			}
+		}
+		solar_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			set_name = random
+		}
+		every_owned_pop = {
+			kill_pop = yes
+		}
+		destroy_colony = yes
+		change_pc = pc_shattered
+	}
+	
+	#远星风云
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_zb4_planet
+		}
+		owner = {
+			save_event_target_as = distar_traveler
+		}
+		solar_system = {
+			save_event_target_as = uis_prefer_system
+		}
+		save_event_target_as = uis_prefer_planet
+		random_system = {
+			limit = {
+				has_star_flag = uiscluster5
+				NOT = { exists = starbase }
+			}
+			create_uis_citadel = yes
+			set_name = event_target:uis_prefer_system
+			every_system_planet = {
+				if = {
+					limit = {
+						is_colonizable = yes 
+						is_colony = no
+					}
+					uis_creatcolony_extra = yes
+					set_owner = root
+					set_controller = root
+					set_capital = yes
+					set_name = event_target:uis_prefer_planet
+					create_uis_homeworld = yes
+					add_deposit = d_uisphilosopher_stone
+				}
+				else_if = {
+					limit = {
+						has_deposit_for = shipclass_mining_station
+						has_mining_station = no
+					}
+					create_mining_station = { owner = root }
+				}
+			}
+		}
+		create_uis_minorcountry = yes
+		last_created_country = {
+			establish_communications_no_message = event_target:distar_traveler
+			random_system = {
+				limit = {
+					has_star_flag = uiscluster2b
+					NOT = { exists = starbase }
+				}
+				create_uis_citadel = yes
+				every_system_planet = {
+					if = {
+						limit = {
+							is_colonizable = yes
+							is_colony = no
+						}
+						uis_creatcolony_main = yes
+						set_capital = yes
+						add_deposit = d_uisphilosopher_stone
+					}
+					else_if = {
+						limit = {
+							has_deposit_for = shipclass_mining_station
+							has_mining_station = no
+						}
+						create_mining_station = { owner = root }
+					}
+				}
+			}
+			create_uis_fleet = yes
+		}
+		create_uis_minorcountry = yes
+		last_created_country = {
+			establish_communications_no_message = event_target:distar_traveler
+			random_system = {
+				limit = {
+					has_star_flag = uiscluster1
+					NOT = { exists = starbase }
+				}
+				create_uis_citadel = yes
+				every_system_planet = {
+					if = {
+						limit = {
+							is_colonizable = yes
+							is_colony = no
+						}
+						uis_creatcolony_main = yes
+						set_capital = yes
+						add_deposit = d_uisphilosopher_stone
+					}
+					else_if = {
+						limit = {
+							has_deposit_for = shipclass_mining_station
+							has_mining_station = no
+						}
+						create_mining_station = { owner = root }
+					}
+				}
+			}
+			create_uis_fleet = yes
+		}
+		create_uis_minorcountry = yes
+		last_created_country = {
+			establish_communications_no_message = event_target:distar_traveler
+			random_system = {
+				limit = {
+					has_star_flag = uiscluster3b
+					NOT = { exists = starbase }
+				}
+				create_uis_citadel = yes
+				every_system_planet = {
+					if = {
+						limit = {
+							is_colonizable = yes
+							is_colony = no
+						}
+						uis_creatcolony_main = yes
+						set_capital = yes
+						add_deposit = d_uisphilosopher_stone
+					}
+					else_if = {
+						limit = {
+							has_deposit_for = shipclass_mining_station
+							has_mining_station = no
+						}
+						create_mining_station = { owner = root }
+					}
+				}
+			}
+			create_uis_fleet = yes
+		}
+		solar_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			set_name = random
+		}
+		every_owned_pop = {
+			kill_pop = yes
+		}
+		destroy_colony = yes
+		change_pc = pc_shattered
+	}
+	
+	#高级帝国
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_starsea_planet
+		}
+		solar_system = {
+			every_neighbor_system = {
+				ignore_hyperlanes = yes
+				if = { 
+					limit = {
+						NOR = {
+							exists = starbase 
+							any_ship_in_system = { exists = owner owner = { is_hostile = root } }
+						}
+					}
+					create_starbase = { size = starbase_outpost owner = root }
+					every_system_planet = {
+						if = {
+							limit = { 
+								is_colonizable = yes 
+								is_colony = no
+								habitability = { who = root.owner_species value > 0.5 }
+							}
+							uis_creatcolony = yes
+						}
+						else_if = {
+							limit = { 
+								is_colonizable = yes 
+								is_colony = no
+							}
+							start_colony = {
+								owner = last_created_country
+								species = owner_main_species
+							}
+						}
+						else_if = {
+							limit = { 
+								has_deposit_for = shipclass_mining_station
+								has_mining_station = no
+							}
+							create_mining_station = { owner = root }
+						}
+					}
+				}
+				every_neighbor_system = {
+					ignore_hyperlanes = yes
+					if = { 
+						limit = {
+							NOR = {
+								exists = starbase 
+								any_ship_in_system = { exists = owner owner = { is_hostile = root } }
+							}
+						}
+						create_starbase = { size = starbase_outpost owner = root }
+						every_system_planet = {
+							if = {
+								limit = { 
+									is_colonizable = yes 
+									is_colony = no
+									habitability = { who = root.owner_species value > 0.5 }
+								}
+								uis_creatcolony = yes
+							}
+							else_if = {
+								limit = { 
+									is_colonizable = yes 
+									is_colony = no
+								}
+								start_colony = {
+									owner = last_created_country
+									species = owner_main_species
+								}
+							}
+							else_if = {
+								limit = { 
+									has_deposit_for = shipclass_mining_station
+									has_mining_station = no
+								}
+								create_mining_station = { owner = root }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#补全
+uis_home_planet_secondery_pass = {
+	#盖娅
+	IF = {
+		limit = {
+			has_planet_flag = uis_ghroth_planet
+		}
+		if = { 
+			limit = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_graveyard
+					is_planet_class = pc_crystal
+					is_planet_class = pc_floating
+					is_planet_class = pc_technoorganic
+				}
+			}
+			add_deposit = d_uisplanetwakinga
+		}
+		else_if = {
+			limit = {
+				owner = { is_machine_empire = yes } 
+				NOT = {	owner = { owner = { has_civic = civic_machine_servitor } } }
+			}
+			clear_deposits = yes
+			change_pc = pc_machine
+			add_deposit = d_uisplanetwakingc
+		}
+		else_if = { limit = { owner = { is_hive_empire = yes } }
+			clear_deposits = yes
+			change_pc = pc_hive
+			add_deposit = d_uisplanetwakingb
+		}
+		else = {
+			clear_deposits = yes
+			change_pc = pc_gaia
+			add_deposit = d_uisplanetwakinga
+			add_deposit = d_searing_desert
+			add_deposit = d_underwater_vent
+			add_deposit = d_tempestous_mountain
+			add_deposit = d_frozen_gas_lake
+			add_deposit = d_ore_rich_caverns 		
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_submerged_ore_veins
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_lush_jungle
+			add_deposit = d_teeming_reef
+			add_deposit = d_black_soil
+			add_deposit = d_fertile_lands
+		}
+	}
+	
+	#魔网
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_mystra_planet
+		}
+		add_deposit = d_uismagicplanet
+		add_deposit = d_uismagicmanager_ruin
+		add_deposit = d_uisdangerdragon
+		add_deposit = d_uisworldtree
+		add_deposit = d_skycity_ruin
+		add_deposit = d_uisspacewhere
+		while = {
+			count = 3
+			add_deposit = d_uisspacewhere_ruin
+		}
+	}
+
+	#七印之门
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_ancientgrave_planet
+		}
+		clear_deposits = yes
+		change_pc = pc_relic
+		add_deposit = d_mesopotamian_urban_corridor	
+		add_deposit = d_boswash_metropolitan_axis
+		add_deposit = d_mauritanian_security_zone
+		add_deposit = d_great_albertan_crater
+		add_deposit = d_scandinavian_reclamation_sector	
+		add_deposit = d_saharan_irrigation_project
+		add_deposit = d_pearl_river_agglomerate
+		add_deposit = d_pacific_algae_tracts
+		
+		add_deposit = d_failing_infrastructure_earth
+		add_deposit = d_failing_infrastructure
+		add_deposit = d_failing_infrastructure
+		add_deposit = d_failing_infrastructure
+		
+		add_deposit = d_flooded_reactor_pits
+		add_deposit = d_crumbling_mining_tunnels
+		
+		add_deposit = d_collapsed_spire
+		add_deposit = d_collapsed_spire
+		add_deposit = d_collapsed_spire
+		
+		add_deposit = d_uisparaboxtemp
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					is_colony = no
+					has_anomaly = no
+					NOT = { exists = archaeological_site }
+				}
+				prevent_anomaly = yes
+				create_archaeological_site = random
+			}
+		}
+	}
+
+	#理想城
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_dreamedcity_planet
+		}
+		clear_deposits = yes
+		change_pc = pc_city
+		remove_all_districts = yes
+		set_planet_entity = {
+			entity = "city_planet_entity"
+			graphical_culture = owner
+		}
+		if = { limit = { owner = { has_civic = civic_life_seeded } }
+			add_deposit = d_massive_crevice
+		}
+		while = {
+			count = 10
+			add_deposit = d_uiscityruin_crater
+			add_deposit = d_ruined_arcology
+		}
+	}
+
+	#环世界
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_rimworld_planet 
+		}
+		clear_deposits = yes
+		change_pc = pc_ringworld_habitable
+		add_deposit = d_uisrimruin_crater
+		add_deposit = d_uisrimruin_crater
+		add_deposit = d_uisrimruin_crater
+		
+		remove_all_districts = yes
+		add_building = building_dimensional_fabricator
+		
+		#生命崽种
+		if = { limit = { owner = { has_civic = civic_life_seeded } }
+			add_deposit = d_industrial_sector
+		}
+		
+		#常规区划
+		if = { limit = { owner = { is_hive_empire = yes } }
+			add_district = district_rw_generator
+		}
+		else_if = { limit = { owner = { is_machine_empire = yes } }
+			add_district = district_rw_generator
+		}
+		else = {
+			add_district = district_rw_commercial
+		}
+		
+		#苹果判断
+		if = { limit = { owner = { is_lithoid_empire = yes } }
+			if = { limit = { owner = { has_country_flag = non_lithoid_subspecies } }
+				add_district = district_rw_farming
+			}
+		}
+		else_if = { limit = { owner = { is_hive_empire = yes } }
+			add_district = district_rw_farming	
+		}
+		else_if = { limit = { owner = { is_machine_empire = yes } }
+			if = { limit = { owner = { has_country_flag = non_lithoid_subspecies } }
+				add_district = district_rw_farming
+			}
+		}
+		else = {
+			add_district = district_rw_farming
+		}
+		
+		if = { limit = { planet_size > 5  }
+			set_planet_size = 5	
+		}
+	}
+	
+	#流浪的球
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_wanderplanet_planet
+		}
+		add_deposit = d_uiscollapsed_spire
+		while = {
+			count = 4
+			add_deposit = d_uiswanderruin_crater
+			add_deposit = d_uiswandercity_crater
+			add_deposit = d_uiscrumbling_tunnels
+			add_deposit = d_uisrepmining_tunnels
+			add_deposit = d_uisfood_ruins
+		}
+	}
+	
+	#乐园追放
+	ELSE_IF = {
+		limit = {
+			has_planet_flag = uis_exileparadise_planet
+		}
+		clear_blockers = yes
+		remove_all_districts = yes
+		remove_all_buildings = yes
+		while = {
+			count = 8
+			add_deposit = d_tomb_world_ruins
+			add_deposit = d_tomb_world_wasteland
+		}
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					is_colonizable = yes
+					is_colony = no
+					is_planet_class = pc_habitat
+				}
+				set_owner = root
+				set_controller = root
+				set_capital = yes
+			}
+		}
+		owner = { 
+			save_event_target_as = exile_traveler 
+		}
+		create_country = {
+			name = event_target:exile_traveler
+			authority = random
+			civics = {
+				civic = civic_landed_nobility
+				civic = civic_flat_world_theory
+			}
+			species = event_target:exile_traveler
+			ethos = random
+			flag = {
+				icon = {
+					category = "special"
+					file = "primitive.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors={
+					"purple"
+					"dark_purple"
+					"null"
+					"null"
+				}
+			}
+			type = primitive
+		}
+		last_created_country = {
+			set_graphical_culture = preindustrial_01
+			set_country_flag = iron_age 
+			set_primitive_age = iron_age
+		}
+		every_owned_pop = {
+			unemploy_pop = yes
+		}
+		set_owner = last_created_country
+	}
+}
+
+#检测
+uis_home_planet_final_pass = {
+	#兼容District Overhaul
+	IF = {
+		limit = {
+			has_modifier = dd_home_planet
+		}
+		if = {
+			limit = {
+				OR = {
+					habitable_structure = yes
+					is_planet_class = pc_city
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+					is_planet_class = pc_dyson_swarm
+					is_planet_class = pc_asteroid_base
+					is_planet_class = pc_moon_base
+				}
+			}
+			remove_modifier = dd_home_planet
+			set_global_flag = DistrictOverhaul_home_planet_disabled
+		}
+	}
+	
+	#兼容Planetary Diversity
+	IF = {
+		limit = {
+			has_global_flag = planetarydiversity
+		}
+		if = {
+			limit = {
+				AND = {
+					is_planet_class = pc_archive
+					NOT = { has_district = district_archive_housing }
+				}
+			}
+			while = {
+				limit = { free_housing > 0 }
+				add_district = district_archive_housing
+			}
+		}
+	}
+	
+	#主体与亚种都非需求苹果替换区划
+	IF = { 
+		limit = {
+			owner = {
+				OR = {
+					AND = {
+						is_lithoid_empire = yes
+						NOT = {	has_country_flag = non_lithoid_subspecies }
+					}
+					AND = {
+						is_machine_empire = yes
+						has_country_flag = lithoid_subspecies
+					}
+				}
+			}
+			OR = {
+				has_district = district_farming
+				has_building = building_hydroponics_farm
+			}
+		}
+		if = { limit = { has_district = district_farming }
+			while = { limit = { has_district = district_farming }
+				remove_district = district_farming
+				add_district = district_mining
+			}
+		}
+		else_if = { limit = { has_building = building_hydroponics_farm }
+			while = { limit = { has_building = building_hydroponics_farm }
+				remove_building = building_hydroponics_farm
+				add_building = building_uis_hydroponics_stone
+			}
+		}
+	}
+
+	#格式塔星球替换无限区划
+	IF = {
+		limit = {
+			OR = {
+				is_planet_class = pc_hive
+				is_planet_class = pc_machine
+			}
+		}
+		while = { limit = { has_district = district_generator }
+			remove_district = district_generator
+			add_district = district_generator_uncapped
+		}
+		while = { limit = { has_district = district_mining }
+			remove_district = district_mining
+			add_district = district_mining_uncapped
+		}
+		while = { limit = { has_district = district_farming }
+			remove_district = district_farming
+			add_district = district_farming_uncapped
+		}
+	}
+	
+	#空区划星球重建弥补区划
+	IF = {
+		limit = {
+			NOT = { has_district = district_generator }
+			habitable_structure = no
+			NOR = {
+				is_planet_class = pc_hive
+				is_planet_class = pc_machine
+				is_planet_class = pc_city
+				is_planet_class = pc_archive
+				is_planet_class = pc_dyson_swarm
+				is_planet_class = pc_asteroid_base
+				is_planet_class = pc_moon_base
+			}
+		}
+		remove_all_districts = yes
+		remove_all_buildings = yes
+		generate_start_buildings_and_districts = yes
+		if = {
+			limit = {
+				NOT = { has_district = district_generator }
+			}
+			add_deposit = d_uisbug_deposit
+			remove_all_districts = yes
+			remove_all_buildings = yes
+			generate_start_buildings_and_districts = yes
+		}
+	}
+}

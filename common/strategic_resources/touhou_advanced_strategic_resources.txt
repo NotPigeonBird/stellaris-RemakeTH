@@ -1,0 +1,26 @@
+sr_lingli = {
+	is_rare = yes
+	AI_category = strategic_resource
+	is_planet_local = no
+	is_global = yes
+	tradable = no
+
+	deficit_modifier = sr_lingli_deficit
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+sr_fuka = {
+	is_rare = yes
+	AI_category = strategic_resource
+	is_planet_local = no
+	is_global = yes
+	tradable = no
+
+	deficit_modifier = sr_fuka_deficit
+	
+	ai_weight = {
+		weight = 100
+	}
+}

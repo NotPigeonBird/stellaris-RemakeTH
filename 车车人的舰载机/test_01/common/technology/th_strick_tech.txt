@@ -1,0 +1,107 @@
+##人形科技而已##
+tech_doll_1 = {
+     cost = @tier3cost1
+	 area = engineering
+	 category = { industry }
+	 prerequisites { "tech_powered_exoskeletons" }
+	 tier = 1
+	 weight = @tier2weight1
+	 is_reverse_engineerable = no
+	 
+	 modifier = {
+	     planet_districts_cost_mult = 0.1
+		 planet_jobs_produces_mult = 0.05
+		}
+	 
+	 prereqfor_desc = {
+	     ship = {
+		     title = "TECH_DOLL_1_TITLE"
+			 desc = "TECH_DOLL_1_DESC"
+			}
+		}
+	 potential = { has_authority = auth_gensokyo }
+
+	 weight_modifier = {
+		 modifier = {
+			factor = 1.50
+			 years_passed > 20
+			   }
+        }
+     ai_weight = {
+		modifier = {
+			factor = 1.50
+			 years_passed > 20
+			}
+		}
+	}
+     
+
+
+##舰载机科研##
+
+tech_th_goliath_doll = {                 #ID
+     cost = @tier3cost2                      #花费
+     area = engineering                      #分类（物理学 physics/社会学 society/工程学 engineering）
+     start_tech = no              #为初始科技yes或no（一般不写
+     category = { rocketry }             #具体分类 field_manipulation 力场操控 particles 粒子物理 psionics 灵能理论 voidcraft 宇航技术 biology 生物学# computing 计算技术 industry 工业技术 materials 材料科学 military_theory 军事理论 new_worlds 新世界理论# propulsion 推进力学 statecraft 治国术 rocketry 火箭技术
+     prerequisites = { "tech_doll_1" "tech_strike_craft_3" }      #前置科技
+     tier = 3                      #是多少级的科技？
+	 weight = @tier3weight2
+	 is_rare = yes
+	 is_reverse_engineerable = no
+     
+	    ##一个n级科技需要最少6项(n-1)级科技的研究完成，才会被刷出
+		
+	 potential = {
+		 has_authority = auth_gensokyo
+		}
+	 weight_modifier = {
+		 modifier = {
+			factor = 1.25
+			 years_passed > 50
+		    }
+		 modifier = {
+		    factor = 4
+			 if = {
+			     has_technology = { "tech_doll_1" }
+				}
+			}
+		}	
+     ai_weight = {
+		 modifier = {
+			factor = 1.25
+			 years_passed > 50
+			}
+		}
+	  
+    }
+	
+tech_th_mofashu_attack = {
+     cost = @tier3cost3
+	 area = engineering
+	 category = { rocketry }
+	 prerequisites = { "tech_positronic_implants" }
+	 tier = 3
+	 weight = @ tier3weight2
+	 is_rare = yes
+	 is_reverse_engineerable = no
+	 
+	 potential = {
+		 has_authority = auth_gensokyo
+        }
+	 weight_modifier = {
+		 modifier = {
+			factor = 1.25
+			 years_passed > 50
+			   
+		    }
+        }
+      ai_weight = {
+		modifier = {
+			factor = 1.50
+			 years_passed > 50
+			}
+		}
+	 
+	}
+	

@@ -1,0 +1,95 @@
+##巴瓦鲁攻击系统##
+
+strike_craft_component_template = {    #声明为舰载机
+	key = "MAGIC_BOOK_HANGAR_1"        #组件ID
+	size = LARGE                       #隶属槽位，但是不知道为什么是LARGE，也许是说尺寸吧
+	entity = "fighter_entity"          #记得改实体
+	weapon_type =  point_defence       #武器类型
+	projectile_gfx = "scout_laser_1"   #武器效果
+	power = -35                        #耗电量
+	resources = {                      #资源相关
+		category = ship_components     #指明为舰船经济
+		cost = {                       #制造所需资源                 
+			alloys = 50
+		}
+		upkeep = {                     #维护资源（以每月计算）
+			alloys = 0.01
+		}
+	}
+	count = 10                         #编队数量
+	regeneration_per_day = 0.025       #生产能力（按天计算）
+	launch_time = 0.5                  #发射时间
+	damage = 40                        #伤害
+	cooldown = 4                       #冷却
+	range = 80                         #射程
+	engagement_range = 65 #交战范围
+	accuracy = 1.00       #命中
+	tracking = 1.00       #追踪
+	health = 20           #血量
+	armor = 0           #装甲
+	shield = 40          #护盾
+
+	evasion = 0.60     #规避
+	speed = 800         #速度
+	rotation_speed = 30 #旋转速度
+	acceleration = 2.5  #加速度
+
+	shield_penetration = 0.80  #武器修正：护盾贯穿
+	armor_damage = 3.00        #装甲伤害
+	hull_damage = 2
+
+	ship_behavior = "books_behavior"          #舰船行为
+	icon = "GFX_巴瓦鲁图书" #贴图
+	icon_frame = 1
+	component_set = "BOOK"                  #武器集
+	
+	tags = { weapon_type_strike_craft }       #武器类型：动能，能力~~~
+}
+
+##歌莉娅人形##
+strike_craft_component_template = {    #声明为舰载机
+	 key = "GOLIATH_DOLL_HANGAR_1"        #组件ID
+	 size = LARGE                       #隶属槽位，但是不知道为什么是LARGE
+	 entity = "bomber_entity"          #快搞模型来
+	 weapon_type = instant        #武器类型：舰载机
+	 projectile_gfx = "scout_laser_1"   #武器贴图
+	 power = -40                          #耗电量
+	 resources = {                      #资源相关
+		category = ship_components     #指明为舰船经济
+		cost = {                       #制造所需资源                 
+			alloys = 1
+		}
+		upkeep = {                     #维护资源（以每月计算）
+			energy = 0.01
+			alloys = 0.01
+		}
+	 }
+	 count = 4                          #编队数量
+	 regeneration_per_day = 1          #生产能力（按天计算）
+	 launch_time = 1                    #发射时间
+	 damage = { min = 40 max = 80 }   #伤害
+	 cooldown = 4                     #冷却
+	 range = 1                         
+	 engagement_range = 250 #交战范围
+	 accuracy = 1.00       #命中
+	 tracking = 1.00       #追踪
+	 health = 10          #血量
+	 armor = 10           #装甲
+	 shield = 30          #护盾
+
+	 evasion = 0.80     #规避
+	 speed = 600         #速度
+	 rotation_speed = 5 #旋转速度
+	 acceleration = 120  #加速度
+
+	 armor_damage = 1        #装甲伤害
+     hull_damage = 3
+
+     ship_behavior = "dolls_behavior"          #舰船行为
+	 icon = "GFX_歌莉娅人形"   #贴图
+	 icon_frame = 1
+	 component_set = "DOLL"                  #武器集
+     #####prerequisites###留着写前置科技
+
+	 tags = { weapon_type_strike_craft }       #武器类型：动能，能力~~~
+    }

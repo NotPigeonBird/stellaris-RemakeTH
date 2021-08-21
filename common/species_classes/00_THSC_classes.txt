@@ -1,0 +1,29 @@
+THSC = {
+	archetype = TOUHOUGIRLS
+    possible = {
+		OR = {
+			authority = {
+				NOT = {
+					value = auth_gensokyo
+					text = gensokyo_base_species_must_not_use_THSC
+				}
+			}
+			origin = {
+				value = origin_gensokyo_change_species
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+				text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+			}
+		}
+	}
+	gender = no
+	randomized = no
+	portraits = {
+		"spth_touhou"
+	}
+	graphical_culture = strg_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}

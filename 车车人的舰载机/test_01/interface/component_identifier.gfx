@@ -1,0 +1,12 @@
+spriteTypes = {
+     spriteType = {
+         name = "GFX_歌莉娅人形"
+         texturefile = "gfx/interface/icons/ship_parts/ship_part_goliath_doll.dds"
+        }
+    }
+spriteTypes = {
+     spriteType = {
+         name = "GFX_巴瓦鲁图书"
+         texturefile = "gfx/interface/icons/ship_parts/ship_part_mofashu.dds"
+        }
+    }

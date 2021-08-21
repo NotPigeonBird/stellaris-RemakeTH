@@ -1,0 +1,4 @@
+spth_js_skill_hml_0 = {
+	ship_armor_penetration_mult = 0.01
+	ship_shield_penetration_mult = 0.01
+}

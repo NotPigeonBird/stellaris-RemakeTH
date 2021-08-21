@@ -1,0 +1,156 @@
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_shield_jiejie1"
+		texturefile = "gfx/interface/icons/ship_parts/th_shield_jiejie1.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_shield_jiejie2"
+		texturefile = "gfx/interface/icons/ship_parts/th_shield_jiejie2.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_armor_scarlet1"
+		texturefile = "gfx/interface/icons/ship_parts/th_armor_scarlet1.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_armor_scarlet2"
+		texturefile = "gfx/interface/icons/ship_parts/th_armor_scarlet2.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_muso"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_muso.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_spark"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_spark.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_maho"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_maho.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_engine_xijian"
+		texturefile = "gfx/interface/icons/ship_parts/th_engine_xijian.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_gungnir"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_gungnir.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_hebang"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_hebang.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_koishi"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_koishi.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_satori"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_satori.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_yueshiji"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_yueshiji.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_lumiya"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_lumiya.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_taiyang"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_taiyang.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_watch"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_watch.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_laevatain"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_laevatain.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_yuzhu"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_yuzhu.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_mofashu"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_mofashu.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_xianzhe"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_xianzhe.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_knife"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_knife.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_xieshi"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_xieshi.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_weapon_sanae"
+		texturefile = "gfx/interface/icons/ship_parts/th_weapon_sanae.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_moon_computer_line"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_moon_computer_line.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_moon_computer_artillery"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_moon_computer_artillery.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_th_ship_part_moon_computer_carrier"
+		texturefile = "gfx/interface/icons/ship_parts/th_ship_part_moon_computer_carrier.dds"
+	}
+}

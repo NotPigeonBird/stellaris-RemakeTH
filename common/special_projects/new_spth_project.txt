@@ -1,0 +1,410 @@
+#十年计划
+special_project = {
+	key = "spth_10years_project_gy_1"
+	event_chain = "spth_10years_chain"
+	#cost = 0
+	days_to_research = 3300
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	tech_department = engineering_technology
+
+	picture = GFX_evt_spth_sdgz_gy
+
+	event_scope = planet_event
+
+	# requirements = {
+	# 	shipclass_transport = 1
+	# }
+	on_progress_25 = {
+		owner = {
+			country_event = {
+				id = spth_ap.1
+			}
+		}
+	}
+	on_progress_50 = {
+		owner = {
+			country_event = {
+				id = spth_ap.1
+			}
+		}
+	}
+	on_progress_75 = {
+		owner = {
+			country_event = {
+				id = spth_ap.1
+			}
+		}
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = spth_ap.1
+			}
+		}
+	}
+	on_fail = { }
+}
+special_project = {
+	key = "spth_10years_project_ky_1"
+	event_chain = "spth_10years_chain"
+	cost = 0
+	days_to_research = 3600
+	icon = "gfx/interface/icons/situation_log/situation_log_modification.dds"
+	tech_department = engineering_technology
+
+	picture = GFX_evt_spth_sdgz_ky
+
+	#same_option_group_as = { spth_10years_project_gy }
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+	on_progress_25 = {
+		owner = {
+			country_event = {
+				id = spth_ap.2
+			}
+		}
+	}
+	on_progress_50 = {
+		owner = {
+			country_event = {
+				id = spth_ap.2
+			}
+		}
+	}
+	on_progress_75 = {
+		owner = {
+			country_event = {
+				id = spth_ap.2
+			}
+		}
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = spth_ap.2
+			}
+		}
+	}
+	on_fail = {	}
+}
+special_project = {
+	key = "spth_10years_project_js_1"
+	event_chain = "spth_10years_chain"
+	cost = 0
+	days_to_research = 3000
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	tech_department = engineering_technology
+
+	picture = GFX_evt_spth_sdgz_js
+
+	#same_option_group_as = { spth_10years_project_gy }
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+	on_progress_25 = {
+		owner = {
+			country_event = {
+				id = spth_ap.3
+			}
+		}
+	}
+	on_progress_50 = {
+		owner = {
+			country_event = {
+				id = spth_ap.3
+			}
+		}
+	}
+	on_progress_75 = {
+		owner = {
+			country_event = {
+				id = spth_ap.3
+			}
+		}
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = spth_ap.3
+			}
+		}
+	}
+
+	on_fail = {	}
+}
+special_project = {
+	key = "spth_lingli_theory_normal"
+	event_chain = "spth_lingli_theory"
+	cost = 0
+	days_to_research = 1080
+	tech_department = engineering_technology
+
+	picture = GFX_evt_enigmatic_fortress
+
+	#same_option_group_as = { spth_10years_project_gy }
+
+	event_scope = planet_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		has_trait = leader_trait_science_believer
+	}
+	on_progress_25 = {
+		owner = {
+			country_event = {
+				id = spth_ap.1001
+			}
+		}
+	}
+	on_progress_50 = {
+		owner = {
+			country_event = {
+				id = spth_ap.1001
+			}
+		}
+	}
+	on_progress_75 = {
+		owner = {
+			country_event = {
+				id = spth_ap.1001
+			}
+		}
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = spth_ap.1001
+			}
+		}
+	}
+
+	on_fail = {	}
+}
+special_project = {
+	key = "spth_lingli_theory_scarlet"
+	event_chain = "spth_lingli_theory"
+	cost = 0
+	days_to_research = 1080
+	tech_department = engineering_technology
+
+	picture = GFX_evt_enigmatic_fortress
+
+	same_option_group_as = { spth_lingli_theory_normal }
+
+	event_scope = planet_event
+
+	# requirements = {
+	# 	shipclass_science_ship = 1
+	# 	leader = scientist
+	# 	has_trait = leader_trait_science_believer
+	# }
+	on_progress_25 = {
+		country_event = {
+			id = spth_ap.1002
+		}
+	}
+	on_progress_50 = {
+		country_event = {
+			id = spth_ap.1002
+		}
+	}
+	on_progress_75 = {
+		country_event = {
+			id = spth_ap.1002
+		}
+	}
+	on_success = {
+		country_event = {
+			id = spth_ap.1002
+		}
+	}
+
+	on_fail = {	}
+}
+# special_project = {
+# 	key = "spth_lingli_theory_hakurei"
+# 	event_chain = "spth_lingli_theory"
+# 	cost = 0
+# 	days_to_research = 1800
+# 	tech_department = engineering_technology
+
+# 	picture = GFX_evt_enigmatic_fortress
+
+# 	same_option_group_as = { spth_lingli_theory_normal }
+
+# 	event_scope = planet_event
+
+# 	# requirements = {
+# 	# 	shipclass_science_ship = 1
+# 	# 	leader = scientist
+# 	# 	has_trait = leader_trait_science_believer
+# 	# }
+# 	on_progress_25 = {
+# 		country_event = {
+# 			id = spth_ap.1003
+# 		}
+# 	}
+# 	on_progress_50 = {
+# 		country_event = {
+# 			id = spth_ap.1003
+# 		}
+# 	}
+# 	on_progress_75 = {
+# 		country_event = {
+# 			id = spth_ap.1003
+# 		}
+# 	}
+# 	on_success = {
+# 		country_event = {
+# 			id = spth_ap.1003
+# 		}
+# 	}
+
+# 	on_fail = {	}
+# }
+# special_project = {
+# 	key = "spth_lingli_theory_moriya"
+# 	event_chain = "spth_lingli_theory"
+# 	cost = 0
+# 	days_to_research = 2520
+# 	tech_department = engineering_technology
+
+# 	picture = GFX_evt_enigmatic_fortress
+
+# 	same_option_group_as = { spth_lingli_theory_normal }
+
+# 	event_scope = planet_event
+
+# 	# requirements = {
+# 	# 	shipclass_science_ship = 1
+# 	# 	leader = scientist
+# 	# 	has_trait = leader_trait_science_believer
+# 	# }
+# 	on_progress_25 = {
+# 		country_event = {
+# 			id = spth_ap.1004
+# 		}
+# 	}
+# 	on_progress_50 = {
+# 		country_event = {
+# 			id = spth_ap.1004
+# 		}
+# 	}
+# 	on_progress_75 = {
+# 		country_event = {
+# 			id = spth_ap.1004
+# 		}
+# 	}
+# 	on_success = {
+# 		country_event = {
+# 			id = spth_ap.1004
+# 		}
+# 	}
+
+# 	on_fail = {	}
+# }
+
+special_project = {
+	key = "spth_human_youkai_name_book"
+	#event_chain = "spth_lingli_theory"
+	cost = 20000
+	#days_to_research = 1080
+	tech_department = society_technology
+
+	picture = GFX_evt_enigmatic_fortress
+
+	#same_option_group_as = { spth_lingli_theory_normal }
+
+	event_scope = planet_event
+
+	# requirements = {
+	# 	shipclass_science_ship = 1
+	# 	leader = scientist
+	# 	has_trait = leader_trait_science_believer
+	# }
+	on_progress_25 = {
+		country_event = {
+			id = spth_ap.1100
+		}
+	}
+	on_progress_50 = {
+		country_event = {
+			id = spth_ap.1100
+		}
+	}
+	on_progress_75 = {
+		country_event = {
+			id = spth_ap.1100
+		}
+	}
+	on_success = {
+		country_event = {
+			id = spth_ap.1100
+		}
+	}
+
+	on_fail = {	}
+}
+special_project = {
+	key = "spth_disabled_leader_ship_revive"
+	cost = {
+		base = 0
+	}
+	days_to_research = 60
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_th_wwj
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_military = 1
+		leader = admiral
+		has_trait = leader_trait_spth_status
+		
+	}
+	
+	on_success = {
+		this = {
+			set_disabled = no
+			repair_ship = yes
+		}
+	}
+	
+	on_fail = {
+
+	}
+}
+special_project = {
+	key = "spth_disabled_leader_ship_revive_cap"
+	cost = {
+		base = 0
+	}
+	days_to_research = 90
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_th_wwj
+	
+	event_scope = ship_event
+	
+	requirements = {
+		
+	}
+	
+	on_success = {
+		this = {
+			set_disabled = no
+			repair_ship = yes
+		}
+	}
+	
+	on_fail = {
+
+	}
+}

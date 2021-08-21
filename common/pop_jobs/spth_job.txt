@@ -1,0 +1,616 @@
+spth_lingli_refine = {
+	category = worker
+	is_capped_by_modifier = no
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_planet = yes
+	}
+
+	possible = {
+		has_trait = trait_touhou
+		OR = {
+			owner = {has_authority = auth_gensokyo}
+		}
+		NOT = {
+			owner = {has_ascension_perk = ap_spth_moriya_zz}
+		}
+	}
+	resources = {
+		category = planet_priests
+		produces = {
+			sr_lingli = 0.2
+			unity = 0.3
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				owner = {has_technology = "tech_worker_0"}
+			}
+			energy = 3
+			minerals = 3
+			food = 3
+		}
+		produces = {
+			trigger = {
+				owner = { has_ascension_perk = ap_spth_hakurei_zz }
+			}
+			sr_lingli = 0.2
+			unity = 0.3
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_ascension_perk = ap_spth_scarlet_zz }
+			}
+			sr_lingli = 0.1
+			unity = 5
+		}
+		produces = {
+			trigger = {
+				owner = { has_country_flag = spth_worker_lingli_focus }
+			}
+			sr_lingli = 0.4
+		}
+		produces = {
+			trigger = {
+				owner = { has_country_flag = spth_worker_research_focus }
+			}
+			unity = 0.1
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+		}
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_mu_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	food = 5
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_mu_2
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	society_research = 10
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_shui_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 			}
+		# 			NAND = {
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_shui_2	
+		# 			}
+		# 		}
+		# 	}
+		# 	unity = 2
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_shui_2
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	unity = 5
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_huo_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	alloys = 4
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_tu_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	minerals = 5
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			is_planet_class = pc_gensokyo_city
+		# 		}
+		# 	}
+		# 	sr_lingli = 1.5
+		# 	unity = 0.5
+		# 	physics_research = 2
+		# 	engineering_research = 2
+		# 	society_research = 2
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_tu_2
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	engineering_research = 10
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_ri_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	energy = 14
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_yue_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	physics_research = 10
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		owner = { has_ascension_perk = ap_toho4 }
+		# 	}
+		# 	unity = 1
+		# 	physics_research = 10
+		# 	engineering_research = 10
+		# 	society_research = 10
+		# 	energy = 28
+		# 	minerals = 28
+		# 	food = 14
+		# }
+		upkeep = {
+			food = 3
+			energy = 5
+		}	
+	}
+	weight = {
+		weight = 0.01
+		modifier = {
+			factor = 0.1
+			planet = {
+				free_jobs > 0 
+			}
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = energy
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = minerals
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = food
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				resource_income_compare = {
+					resource = sr_lingli
+					value <= 0
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				owner = {
+					has_ascension_perk = ap_spth_scarlet_zz
+					has_ascension_perk = ap_spth_hakurei_zz
+				}
+			}
+		}
+	}
+}
+spth_believer = {
+	category = worker
+	is_capped_by_modifier = no
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_planet = yes
+	}
+
+	possible = {
+		has_trait = trait_touhou
+		owner = {has_ascension_perk = ap_spth_moriya_zz}
+	}
+	resources = {
+		category = planet_priests
+		produces = {
+			sr_lingli = 0.9
+			unity = 3
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = "tech_worker_0" }
+			}
+			energy = 3
+			minerals = 3
+			food = 3
+		}
+		produces = {
+			trigger = {
+				owner = { has_edict = spth_hxkzjh_battle }
+			}
+			energy = 3
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_edict = spth_hxkzjh_farm }
+			}
+			energy = 3
+			minerals = 3
+			food = 3
+		}
+		upkeep = {
+			food = 3
+		}
+	}
+	weight = {
+		weight = 1
+		modifier = {
+			factor = 0.01
+			planet = {
+				free_jobs > 0 
+			}
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = energy
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = minerals
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = food
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0
+			has_pop_flag = spth_believer_1_flag
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				resource_income_compare = {
+					resource = sr_lingli
+					value <= 0
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				OR = {
+					has_edict = spth_hxkzjh_farm
+					has_edict = spth_hxkzjh_battle
+				}
+			}
+		}
+	}
+}
+spth_believer_1 = {
+	category = worker
+	is_capped_by_modifier = no
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_planet = yes
+	}
+
+	possible = {
+		has_trait = trait_touhou
+		has_pop_flag = spth_believer_1_flag
+		owner = {has_ascension_perk = ap_spth_moriya_zz}
+	}
+	resources = {
+		category = planet_priests
+		produces = {
+			sr_lingli = 1.2
+			unity = 6
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = "tech_worker_0" }
+			}
+			energy = 3
+			minerals = 3
+			food = 3
+		}
+		produces = {
+			trigger = {
+				owner = { has_edict = spth_hxkzjh_battle }
+			}
+			energy = 5
+			alloys = 1.5
+		}
+		produces = {
+			trigger = {
+				owner = { has_edict = spth_hxkzjh_farm }
+			}
+			energy = 3
+			minerals = 5
+			food = 5
+		}
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_mu_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	food = 5
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_mu_2
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	society_research = 10
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_shui_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 			}
+		# 			NAND = {
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_shui_2	
+		# 			}
+		# 		}
+		# 	}
+		# 	unity = 2
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_shui_2
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	unity = 5
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_huo_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	alloys = 4
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_tu_1
+		# 				has_modifier = th_planet_xzzs_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	minerals = 5
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			is_planet_class = pc_gensokyo_city
+		# 		}
+		# 	}
+		# 	sr_lingli = 1.5
+		# 	unity = 0.5
+		# 	physics_research = 2
+		# 	engineering_research = 2
+		# 	society_research = 2
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_tu_2
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	engineering_research = 10
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_ri_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	energy = 14
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = {
+		# 			OR = {
+		# 				has_modifier = th_planet_yue_1
+		# 				has_modifier = th_planet_xzzs_2
+		# 			}
+		# 		}
+		# 	}
+		# 	physics_research = 10
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		owner = { has_ascension_perk = ap_toho4 }
+		# 	}
+		# 	unity = 1
+		# 	physics_research = 10
+		# 	engineering_research = 10
+		# 	society_research = 10
+		# 	energy = 28
+		# 	minerals = 28
+		# 	food = 14
+		# }
+		upkeep = {
+			food = 3
+		}
+	}
+	weight = {
+		weight = 1
+		modifier = {
+			factor = 0.01
+			planet = {
+				free_jobs > 0 
+			}
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = energy
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = minerals
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 0.1
+			
+				owner = {
+					resource_income_compare = {
+						resource = food
+						value <= 0
+					}
+				}
+			
+		}
+		modifier = {
+			factor = 1000
+			has_pop_flag = spth_believer_1_flag
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				resource_income_compare = {
+					resource = sr_lingli
+					value <= 0
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				OR = {
+					has_edict = spth_hxkzjh_farm
+					has_edict = spth_hxkzjh_battle
+				}
+			}
+		}
+	}
+}

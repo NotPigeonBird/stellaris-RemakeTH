@@ -1,0 +1,123 @@
+###因3.0版本随机数失效做出的简易随机数
+spth_get_random_number = {
+	change_variable = {
+		which = spth_random_number
+		value = 0
+	}
+	every_country = {
+		limit = {
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_militarist
+			}
+		}
+		change_variable = {
+			which = spth_random_number
+			value = 1
+		}
+	}
+	every_owned_pop = {
+		limit = {
+			has_trait = trait_touhou
+		}
+		change_variable = {
+			which = spth_random_number
+			value = 1
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = spth_random_number
+					value > 100
+				}
+			}
+			subtract_variable = {
+				which = spth_random_number
+				value = 100
+			}
+		}
+	}
+	change_variable = {
+		which = spth_random_number_mid
+		value = 1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = spth_random_number_mid
+				value > 13
+			}
+		}
+		subtract_variable = {
+			which = spth_random_number_mid
+			value = 13
+		}
+	}
+	set_variable = {
+		which = spth_random_number_mid_1
+		value = spth_random_number
+	}
+	multiply_variable = {
+		which = spth_random_number_mid_1
+		value = spth_random_number_mid
+	}
+	divide_variable = {
+		which = spth_random_number_mid_1
+		value = 8
+	}
+	floor_variable = spth_random_number_mid_1
+	multiply_variable = {
+		which = spth_random_number_mid_1
+		value = 8
+	}
+	multiply_variable = {
+		which = spth_random_number
+		value = spth_random_number_mid
+	}
+	subtract_variable = {
+		which = spth_random_number
+		value = spth_random_number_mid_1
+	}
+}
+
+
+#首都行星殖民
+spth_creatcolony_extra = {
+	spth_planetpreference = yes
+	uis_planetstartdeposit = yes
+	create_colony = {
+		owner = last_created_country
+		species = owner_species
+	}
+	#(此处应该生成人口)
+	generate_start_buildings_and_districts = yes
+}
+#适配宜居
+uis_planetpreference = {
+	event_target:uis_prefer_planet = {
+		switch = {
+			trigger = is_planet_class
+
+			pc_desert = { prev = { change_pc = pc_desert } }
+			pc_tropical = { prev = { change_pc = pc_tropical } }
+			pc_continental = { prev = { change_pc = pc_continental } }
+			pc_ocean = { prev = { change_pc = pc_ocean } }
+			pc_arctic = { prev = { change_pc = pc_arctic } }
+			pc_tundra = { prev = { change_pc = pc_tundra } }
+			pc_arid = { prev = { change_pc = pc_arid } }
+			pc_alpine = { prev = { change_pc = pc_alpine } }
+			pc_savannah = { prev = { change_pc = pc_savannah } }
+			pc_nuked = { prev = { change_pc = pc_nuked } }
+			pc_gaia = { prev = { change_pc = pc_gaia } }
+			pc_ringworld_habitable = { prev = { change_pc = pc_gaia } }
+			pc_habitat = { prev = { change_pc = pc_gaia } }
+			pc_relic = { prev = { change_pc = pc_relic } }
+			pc_city = { prev = { change_pc = pc_city } }
+			pc_hive = { prev = { change_pc = pc_hive } }
+			pc_machine = { prev = { change_pc = pc_machine } }
+			
+			default = { uis_planetpreference_compatible = yes }
+		}
+	}
+	reroll_deposits = yes
+}

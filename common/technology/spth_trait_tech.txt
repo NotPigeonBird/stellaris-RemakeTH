@@ -1,0 +1,286 @@
+#################特质科技################
+# tech_spth_trait_living_god = {
+# 	cost = @tier4cost1
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+# 	weight = @tier3weight1
+# 	icon = th_advanced_trait
+
+# 	gateway = biological
+
+# 	prereqfor_desc = {
+# 	    diplo_action = {
+# 	        title = "spth_trait_living_god"
+# 			desc = "spth_trait_living_god_desc"  
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_authority = auth_gensokyo
+# 		has_civic = civic_gensokyo
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
+# }
+# tech_spth_trait_magician = {
+# 	cost = @tier4cost1
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+# 	weight = @tier3weight1
+# 	icon = th_advanced_trait
+
+# 	gateway = biological
+
+# 	prereqfor_desc = {
+# 	    diplo_action = {
+# 	        title = "spth_trait_magician"
+# 			desc = "spth_trait_magician_desc"  
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_authority = auth_gensokyo
+# 		has_civic = civic_gensokyo
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
+# }
+# tech_spth_trait_oni = {
+# 	cost = @tier4cost1
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+# 	weight = @tier3weight1
+# 	icon = th_advanced_trait
+
+# 	gateway = biological
+
+# 	prereqfor_desc = {
+# 	    diplo_action = {
+# 	        title = "spth_trait_oni"
+# 			desc = "spth_trait_oni_desc"  
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_authority = auth_gensokyo
+# 		has_civic = civic_gensokyo
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
+# }
+# tech_spth_trait_shikigami = {
+# 	cost = @tier4cost1
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+# 	weight = @tier3weight1
+# 	icon = th_advanced_trait
+
+# 	gateway = biological
+
+# 	prereqfor_desc = {
+# 	    diplo_action = {
+# 	        title = "spth_trait_shikigami"
+# 			desc = "spth_trait_shikigami_desc"  
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_authority = auth_gensokyo
+# 		has_civic = civic_gensokyo
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
+# }
+# tech_spth_trait_moon_rabbit = {
+# 	cost = @tier4cost1
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+# 	weight = @tier3weight1
+# 	icon = th_advanced_trait
+
+# 	gateway = biological
+
+# 	prereqfor_desc = {
+# 	    diplo_action = {
+# 	        title = "spth_trait_moon_rabbit"
+# 			desc = "spth_trait_moon_rabbit_desc"  
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_authority = auth_gensokyo
+# 		has_civic = civic_gensokyo
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
+# }
+# tech_spth_trait_inchling = {
+# 	cost = @tier4cost1
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+# 	weight = @tier3weight1
+# 	icon = th_advanced_trait
+
+# 	gateway = biological
+
+# 	prereqfor_desc = {
+# 	    diplo_action = {
+# 	        title = "spth_trait_inchling"
+# 			desc = "spth_trait_inchling_desc"  
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_authority = auth_gensokyo
+# 		has_civic = civic_gensokyo
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
+# }
+tech_spth_trait_hermit = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	weight = @tier3weight1
+	icon = th_advanced_trait
+
+	gateway = biological
+
+	prereqfor_desc = {
+	    diplo_action = {
+	        title = "spth_trait_hermit"
+			desc = "spth_trait_hermit_desc"  
+		}
+	}
+
+	potential = {
+		has_authority = auth_gensokyo
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+tech_spth_trait_moon_human = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	weight = @tier3weight1
+	icon = th_advanced_trait
+
+	gateway = biological
+
+	prereqfor_desc = {
+	    diplo_action = {
+	        title = "spth_trait_moon_human"
+			desc = "spth_trait_moon_human_desc"  
+		}
+	}
+
+	potential = {
+		has_authority = auth_gensokyo
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+tech_spth_trait_vampire = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	weight = @tier3weight1
+	icon = th_advanced_trait
+
+	gateway = biological
+
+	prereqfor_desc = {
+	    diplo_action = {
+	        title = "spth_trait_vampire"
+			desc = "spth_trait_vampire_desc"  
+		}
+	}
+
+	potential = {
+		has_authority = auth_gensokyo
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+		}
+	}
+}

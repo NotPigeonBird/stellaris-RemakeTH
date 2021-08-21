@@ -1,0 +1,283 @@
+spth_hxkzjh_battle = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			sr_lingli = 7
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_edict = spth_hxkzjh_battle
+			}
+			remove_modifier = spth_lingli_reduce_edict
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_edict = spth_hxkzjh_battle
+				}
+			}
+			add_modifier = {
+				modifier = spth_lingli_reduce_edict
+				multiplier = 7
+			}
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_spth_moriya_zz
+		NOR = {
+			has_edict = spth_hxkzjh_farm
+			has_edict = spth_hxkzjh_no
+		}
+	}
+
+	modifier = {
+		ship_armor_mult = 1
+		ship_hull_mult = 1
+		ship_shield_mult = 1
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+	}
+}
+spth_hxkzjh_farm = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			sr_lingli = 5
+		}
+	}
+
+	potential = {
+		has_ascension_perk = ap_spth_moriya_zz
+		NOR = {
+			has_edict = spth_hxkzjh_battle
+			#has_edict = spth_hxkzjh_no
+		}
+	}
+	effect = {
+		if = {
+			limit = { 
+				has_edict = spth_hxkzjh_farm
+			}
+			remove_modifier = spth_lingli_reduce_edict
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_edict = spth_hxkzjh_farm
+				}
+			}
+			add_modifier = {
+				modifier = spth_lingli_reduce_edict
+				multiplier = 5
+			}
+		}
+	}
+	modifier = {
+		planet_building_build_speed_mult = 0.5
+		planet_colony_development_speed_mult = 1
+		pop_growth_speed = 0.2
+	}
+}
+# spth_hxkzjh_no = {
+# 	length = -1
+# 	icon = "GFX_edict_type_policy"
+# 	edict_cap_usage = 1
+
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+			
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_ascension_perk = ap_spth_moriya_zz
+# 		OR = {
+# 			has_edict = spth_hxkzjh_battle
+# 			has_edict = spth_hxkzjh_farm
+# 		}
+# 	}
+# 	effect = {
+# 		if = {
+# 			limit = { 
+# 				has_modifier = spth_lingli_reduce_edict
+# 			}
+# 			remove_modifier = spth_lingli_reduce_edict
+# 		}
+# 	}
+# 	modifier = {
+# 		planet_building_build_speed_mult = 0.5
+# 		planet_colony_development_speed_mult = 1
+# 		pop_growth_speed = 0.2
+# 	}
+# }
+spth_gs_num_re_sum = {
+	length = 0
+	
+	potential = {
+		has_authority = auth_gensokyo
+	}
+	
+	effect = {
+		hidden_effect = {
+			spth_gs_num_sum = yes
+		}
+	}
+}
+hmx_hellsing = {
+	length = 0
+	
+	potential = {
+		is_ai = no
+		has_ascension_perk = ap_hm3
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = { id = th_hellsing.0 }
+		}
+	}
+}
+hmx_p_up = {
+	length = 0
+	
+	potential = {
+		is_ai = no
+		has_ascension_perk = ap_hm6
+		NOT = {has_country_flag = hmx_p_up_ing}
+		OR = { 
+			has_country_flag = th_weapon_up_start
+			NOT = { has_country_flag = th_weapon_up_edict_time }
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = { id = th_weapon_up.10 }
+		}
+	}
+}
+spth_rpg_gugu_system = {
+	length = 0
+	
+	potential = {
+		is_ai = no
+		has_civic = civic_fight_little_devil
+		has_country_flag = spth_fight_little_devil_fisrt_lvup
+	}
+	
+	effect = {
+		set_country_flag = spth_change_point
+		hidden_effect = {
+			country_event = { id = spth_fight_little_devil.1001 }
+		}
+	}
+}
+#th_change_robot_sp = {
+#	length = 0
+#	
+#	potential = {
+#		is_ai = no
+#		has_technology = tech_robotic_workers
+#	}
+#
+#	effect = {
+#		hidden_effect = {
+#			country_event = { id = toho.51 }
+#		}
+#	}
+#}
+
+
+imba_ycshycx = {
+	length = 30
+	resources = {
+		category = edicts
+		cost = {
+			sr_fuka = 100000
+		}
+	}
+
+	potential = {
+		is_ai = no
+		has_ascension_perk = ap_hm4
+	}
+
+	modifier = {
+		weapon_type_energy_weapon_damage_mult = 3.33
+		ship_armor_mult = 3.33
+		ship_hull_mult = 3.33
+		ship_fire_rate_mult = 1
+	}
+}
+imba_swcjswb = {
+	length = 30
+	resources = {
+		category = edicts
+		cost = {
+			sr_fuka = 100000
+		}
+	}
+
+	potential = {
+		is_ai = no
+		has_ascension_perk = ap_toho4
+	}
+
+	modifier = {
+		weapon_type_energy_weapon_damage_mult = 3.33
+		ship_shield_mult = 3.33
+		ship_armor_mult = 3.33
+		ship_fire_rate_mult = 1
+	}
+}
+th_flagship_lumiya = {
+	length = 30
+	resources = {
+		category = edicts
+		cost = {
+			sr_fuka = 100000
+			sr_lingli = 30000
+		}
+	}
+
+	potential = {
+		is_ai = no
+		has_technology = tech_th_flagship_1
+	}
+
+	effect = {
+		custom_tooltip = edict_th_flagship_lumiya_effect
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "NAME_THfleet1"
+					effect = {
+						set_owner = root						
+							create_ship = {
+								name = "NAME_lumiya"
+								design = "NAME_th_boss_lumiya"
+								graphical_culture = npf_01						
+						}
+						set_location = {
+							target = prev
+							distance = 45
+							angle = random
+						}
+					}
+				}
+			}
+		}
+	}
+}

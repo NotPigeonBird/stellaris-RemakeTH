@@ -1,0 +1,101 @@
+####红魔线
+leader_trait_vampire_ancestor = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/spth_scarlet_ruler_0.dds"
+	modifier = {
+		country_influence_produces_add = 1
+		edicts_cost_mult = -0.20
+		edict_length_mult = 0.20
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_scarlet_devil = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/spth_scarlet_ruler_alter_0.dds"
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_weapon_damage = 0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_scarlet_princess = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/spth_hakurei_ruler_0.dds"
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+		pop_growth_speed = 0.05
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_blood_red = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/spth_hakurei_ruler_alter_0.dds"
+	modifier = {
+		army_damage_mult = 0.5
+		army_health = 0.5
+		army_morale = 0.5
+		ship_fire_rate_mult = 0.1
+		ship_weapon_damage = 0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+
+leader_trait_out_standard_miko = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/spth_hakurei_ruler_alter_0.dds"
+	modifier = {
+		ship_home_territory_fire_rate_mult = 1
+		ship_weapon_damage = 0.4
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_gensokyo_miko = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/spth_hakurei_ruler_0.dds"
+	modifier = {
+		planet_amenities_add = 100
+		planet_building_build_speed_mult = 0.5
+		planet_jobs_produces_mult = 0.05
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_moriya_living_god = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/dxj.dds"
+	modifier = {
+		pop_amenities_usage_mult = -0.2
+		planet_jobs_unity_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.1
+		starbase_outpost_cost_mult = -0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}

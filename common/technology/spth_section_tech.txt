@@ -1,0 +1,31 @@
+tech_spth_ship_sec_1_2 = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { biology }
+	weight = @tier3weight1
+	icon = th_advanced_trait
+
+	gateway = biological
+
+	prereqfor_desc = {
+	    diplo_action = {
+	        title = "spth_ship_sec_1_2"
+			desc = "spth_ship_sec_1_2_desc"  
+		}
+	}
+
+	potential = {
+		has_authority = auth_gensokyo
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+		}
+	}
+}

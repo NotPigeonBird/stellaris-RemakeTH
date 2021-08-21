@@ -1,0 +1,84 @@
+# possible section models:
+# SHIPYARD_STARBASE_SECTION
+# REFINERY_STARBASE_SECTION
+# SCIENCE_STARBASE_SECTION
+# HANGAR_STARBASE_SECTION
+# ASSEMBLYYARD_STARBASE_SECTION
+#
+shrine = {
+	icon = "GFX_spaceport_module_hydroponic_farms"
+	section = "BATTERY_STARBASE_SECTION"
+	construction_days = 180
+    potential = {
+		exists = owner
+		OR = {
+			owner = { has_authority = auth_gensokyo }
+		}
+	}
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 300
+			food = 100
+		}
+        produces = {
+			food = 20
+			consumer_goods = 8
+		}
+		upkeep = {
+		    energy = 20
+			minerals = 16
+		}
+	}
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 2
+			count_starbase_modules = {
+				type = anchorage
+				count < 2
+			}
+		}		
+	}
+}
+th_smelter = {
+	icon = "GFX_spaceport_module_orillium_plant"
+	section = "ANCHORAGE_STARBASE_SECTION"
+	construction_days = 180
+    	construction_days = 180
+    potential = {
+		exists = owner
+		OR = {
+			owner = { has_authority = auth_gensokyo }
+		}
+	}
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 500
+		}
+        produces = {
+			alloys = 15
+		}
+		upkeep = {
+		    minerals = 30
+		}
+	}
+	
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 2
+			count_starbase_modules = {
+				type = anchorage
+				count < 2
+			}
+		}		
+	}
+}
